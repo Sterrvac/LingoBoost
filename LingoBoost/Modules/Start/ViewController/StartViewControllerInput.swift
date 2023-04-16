@@ -1,0 +1,1 @@
+protocol StartViewControllerInput: AnyObject {}
