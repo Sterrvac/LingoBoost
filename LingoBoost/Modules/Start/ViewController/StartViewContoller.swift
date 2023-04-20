@@ -4,7 +4,7 @@ import SnapKit
 final class StartViewController: UIViewController {
     
     private let presenterDelegate: StartViewControllerOutput
-    lazy var registrationView = StartView(delegate: presenterDelegate as! StartViewDelegate)
+    lazy var startView = StartView(delegate: presenterDelegate as! StartViewDelegate)
     
     init(presenterDelegate: StartViewControllerOutput) {
         self.presenterDelegate = presenterDelegate
@@ -16,7 +16,7 @@ final class StartViewController: UIViewController {
     }
     
     override func loadView() {
-        view = registrationView
+        view = startView
     }
     
     override func viewDidLoad() {
@@ -24,7 +24,7 @@ final class StartViewController: UIViewController {
     }
 }
 
-// MARK: - RegistrationViewControllerInput
+// MARK: - StartViewControllerInput
 
 extension StartViewController: StartViewControllerInput {
 }

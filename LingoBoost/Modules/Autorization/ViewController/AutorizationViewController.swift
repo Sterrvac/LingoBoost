@@ -1,12 +1,12 @@
 import UIKit
 
-protocol AutorizationViewContollerDelegate{}
-
 final class AutorizationViewController: UIViewController {
+    
+    private let presenterDelegate: AutorizationViewControllerOutput
     var autorizationView = AutorizationView()
     
-    init(autorizationView: AutorizationView = AutorizationView()) {
-        self.autorizationView = autorizationView
+    init(presenterDelegate: AutorizationViewControllerOutput){
+        self.presenterDelegate = presenterDelegate
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -18,3 +18,7 @@ final class AutorizationViewController: UIViewController {
         view = autorizationView
     }
 }
+
+// MARK: - AutorizationViewController
+
+extension AutorizationViewController: AutorizationViewControllerInput {}

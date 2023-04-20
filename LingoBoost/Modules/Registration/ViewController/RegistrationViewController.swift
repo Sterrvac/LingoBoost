@@ -1,3 +1,3 @@
 import UIKit
 
-final class RegistraionViewController {}
+final class RegistraionViewController: UIViewController {}

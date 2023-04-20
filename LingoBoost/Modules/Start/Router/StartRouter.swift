@@ -1,10 +1,10 @@
 import UIKit
 
 final class StartRouter {
-    weak var registrationViewController: UIViewController?
+    weak var startViewController: UIViewController?
     
     func openAutorizationVC() {
-        let autorizationViewController = RegistrationFactory().build()
-        registrationViewController?.navigationController?.pushViewController(autorizationViewController, animated: true)
+        let autorizationViewController = AutorizationFactory().build()
+        startViewController?.navigationController?.pushViewController(autorizationViewController, animated: true)
     }
 }

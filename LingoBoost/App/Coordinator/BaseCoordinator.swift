@@ -13,7 +13,7 @@ final class BaseCoordinator: Coordinator {
     }
     
     func start() {
-        let registrationFactory = RegistrationFactory().build()
+        let registrationFactory = StartFactory().build()
         
         navigationController.pushViewController(registrationFactory, animated: true)
     }
