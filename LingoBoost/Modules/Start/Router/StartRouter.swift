@@ -7,4 +7,8 @@ final class StartRouter {
         let autorizationViewController = AutorizationFactory().build()
         startViewController?.navigationController?.pushViewController(autorizationViewController, animated: true)
     }
+    func openRegistrationVC() {
+        let registrationViewController = RegistrationFactory().build()
+        startViewController?.navigationController?.pushViewController(registrationViewController, animated: true)
+    }
 }

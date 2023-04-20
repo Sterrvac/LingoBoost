@@ -1,1 +1,1 @@
-
+protocol RegistrationInteractorOutput: AnyObject {}

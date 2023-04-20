@@ -1,3 +1,1 @@
-import UIKit
-
-final class RegistrationViewControllerOutput{}
+protocol RegistrationViewControllerOutput: AnyObject {}

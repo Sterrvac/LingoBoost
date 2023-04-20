@@ -1,3 +1,1 @@
-import UIKit
-
-final class RegistrationViewControllerInput{}
+protocol RegistrationViewControllerInput: AnyObject {}

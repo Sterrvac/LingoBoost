@@ -1,7 +1,7 @@
 struct StartFactory{
     func build() -> StartViewController {
         let router = StartRouter()
-        let presenter = StartPresentor(router: router)
+        let presenter = StartPresenter(router: router)
         let interactor = StartInteractor(presenterDelegate: presenter)
         let viewController = StartViewController(presenterDelegate: presenter)
         

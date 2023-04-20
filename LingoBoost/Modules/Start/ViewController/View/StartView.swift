@@ -3,7 +3,8 @@ import SnapKit
 import AuthenticationServices
 
 protocol StartViewDelegate {
-    func buttonTapped()
+    func buttonTappedAutorization()
+    func buttonTappedRegistration()
 }
 // Настройка всех компонентов, вынести все в appearance
 extension StartView {
@@ -56,7 +57,7 @@ final class StartView: UIView, ASAuthorizationControllerDelegate, ASAuthorizatio
         button.backgroundColor = .systemGray
         button.layer.cornerRadius = 8
         button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(buttonAutorization), for: .touchUpInside)
         return button
     }()
     
@@ -66,7 +67,7 @@ final class StartView: UIView, ASAuthorizationControllerDelegate, ASAuthorizatio
         button.backgroundColor = .systemGray
         button.layer.cornerRadius = 8
         button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(buttonRegistration), for: .touchUpInside)
         return button
     }()
     
@@ -76,7 +77,7 @@ final class StartView: UIView, ASAuthorizationControllerDelegate, ASAuthorizatio
         button.backgroundColor = .systemGreen
         button.layer.cornerRadius = 8
         button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(buttonAutorization), for: .touchUpInside)
         return button
     }()
     
@@ -154,8 +155,11 @@ extension StartView {
         return inputView as! ASPresentationAnchor
     }
     
-    @objc func buttonTapped() {
-        delegate?.buttonTapped()
+    @objc func buttonAutorization() {
+        delegate?.buttonTappedAutorization()
+    }
+    @objc func buttonRegistration() {
+        delegate?.buttonTappedRegistration()
     }
     // Должен вызываться отдельный модуль
     @objc func handleLogInWithAppleID() {

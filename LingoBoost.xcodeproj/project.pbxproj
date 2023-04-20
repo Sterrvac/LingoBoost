@@ -18,7 +18,7 @@
 		FA97DD2729E1CB310069DEB2 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97DD2629E1CB310069DEB2 /* RegistrationView.swift */; };
 		FA97DD2929E1CB790069DEB2 /* RegistrationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97DD2829E1CB790069DEB2 /* RegistrationFactory.swift */; };
 		FA97DD2B29E1CB8F0069DEB2 /* RegistrationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97DD2A29E1CB8F0069DEB2 /* RegistrationRouter.swift */; };
-		FA97DD2D29E1CBA20069DEB2 /* RegistrationPresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97DD2C29E1CBA20069DEB2 /* RegistrationPresentor.swift */; };
+		FA97DD2D29E1CBA20069DEB2 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97DD2C29E1CBA20069DEB2 /* RegistrationPresenter.swift */; };
 		FA97DD2F29E1CBB20069DEB2 /* RegistrationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97DD2E29E1CBB20069DEB2 /* RegistrationInteractor.swift */; };
 		FA97DD3129E1CD3D0069DEB2 /* RegistrationViewControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97DD3029E1CD3D0069DEB2 /* RegistrationViewControllerOutput.swift */; };
 		FA97DD3329E1CDD60069DEB2 /* RegistrationViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97DD3229E1CDD60069DEB2 /* RegistrationViewControllerInput.swift */; };
@@ -27,7 +27,7 @@
 		FAB5C78929F1675B00C34190 /* AutorizationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C78829F1675B00C34190 /* AutorizationInteractor.swift */; };
 		FAB5C78B29F167A000C34190 /* AutorizationInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C78A29F167A000C34190 /* AutorizationInteractorInput.swift */; };
 		FAB5C78D29F167BD00C34190 /* AutorizationInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C78C29F167BD00C34190 /* AutorizationInteractorOutput.swift */; };
-		FAB5C78F29F16AD800C34190 /* AutorizationPresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C78E29F16AD800C34190 /* AutorizationPresentor.swift */; };
+		FAB5C78F29F16AD800C34190 /* AutorizationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C78E29F16AD800C34190 /* AutorizationPresenter.swift */; };
 		FAB5C79129F16CFA00C34190 /* AutorizationViewContollerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C79029F16CFA00C34190 /* AutorizationViewContollerInput.swift */; };
 		FAB5C79329F16D2F00C34190 /* AutorizationViewControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C79229F16D2F00C34190 /* AutorizationViewControllerOutput.swift */; };
 		FAB5C79529F16D8100C34190 /* AutorizationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C79429F16D8100C34190 /* AutorizationRouter.swift */; };
@@ -38,7 +38,7 @@
 		FAD5272529EC7A490047F11E /* StartViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5272429EC7A490047F11E /* StartViewControllerInput.swift */; };
 		FAD5272729EC7B030047F11E /* StartFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5272629EC7B030047F11E /* StartFactory.swift */; };
 		FAD5272929EC7B330047F11E /* StartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5272829EC7B330047F11E /* StartRouter.swift */; };
-		FAD5272B29EC7B7A0047F11E /* StartPresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5272A29EC7B7A0047F11E /* StartPresentor.swift */; };
+		FAD5272B29EC7B7A0047F11E /* StartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5272A29EC7B7A0047F11E /* StartPresenter.swift */; };
 		FAD5272D29EC7BBB0047F11E /* StartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5272C29EC7BBB0047F11E /* StartInteractor.swift */; };
 		FAD5272F29EC7BE60047F11E /* StartInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5272E29EC7BE60047F11E /* StartInteractorOutput.swift */; };
 		FAD5273129EC7BF70047F11E /* StartInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5273029EC7BF70047F11E /* StartInteractorInput.swift */; };
@@ -60,7 +60,7 @@
 		FA97DD2629E1CB310069DEB2 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		FA97DD2829E1CB790069DEB2 /* RegistrationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationFactory.swift; sourceTree = "<group>"; };
 		FA97DD2A29E1CB8F0069DEB2 /* RegistrationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRouter.swift; sourceTree = "<group>"; };
-		FA97DD2C29E1CBA20069DEB2 /* RegistrationPresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresentor.swift; sourceTree = "<group>"; };
+		FA97DD2C29E1CBA20069DEB2 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
 		FA97DD2E29E1CBB20069DEB2 /* RegistrationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationInteractor.swift; sourceTree = "<group>"; };
 		FA97DD3029E1CD3D0069DEB2 /* RegistrationViewControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewControllerOutput.swift; sourceTree = "<group>"; };
 		FA97DD3229E1CDD60069DEB2 /* RegistrationViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewControllerInput.swift; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		FAB5C78829F1675B00C34190 /* AutorizationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationInteractor.swift; sourceTree = "<group>"; };
 		FAB5C78A29F167A000C34190 /* AutorizationInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationInteractorInput.swift; sourceTree = "<group>"; };
 		FAB5C78C29F167BD00C34190 /* AutorizationInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationInteractorOutput.swift; sourceTree = "<group>"; };
-		FAB5C78E29F16AD800C34190 /* AutorizationPresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationPresentor.swift; sourceTree = "<group>"; };
+		FAB5C78E29F16AD800C34190 /* AutorizationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationPresenter.swift; sourceTree = "<group>"; };
 		FAB5C79029F16CFA00C34190 /* AutorizationViewContollerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationViewContollerInput.swift; sourceTree = "<group>"; };
 		FAB5C79229F16D2F00C34190 /* AutorizationViewControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationViewControllerOutput.swift; sourceTree = "<group>"; };
 		FAB5C79429F16D8100C34190 /* AutorizationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationRouter.swift; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		FAD5272429EC7A490047F11E /* StartViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewControllerInput.swift; sourceTree = "<group>"; };
 		FAD5272629EC7B030047F11E /* StartFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFactory.swift; sourceTree = "<group>"; };
 		FAD5272829EC7B330047F11E /* StartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRouter.swift; sourceTree = "<group>"; };
-		FAD5272A29EC7B7A0047F11E /* StartPresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPresentor.swift; sourceTree = "<group>"; };
+		FAD5272A29EC7B7A0047F11E /* StartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPresenter.swift; sourceTree = "<group>"; };
 		FAD5272C29EC7BBB0047F11E /* StartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartInteractor.swift; sourceTree = "<group>"; };
 		FAD5272E29EC7BE60047F11E /* StartInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartInteractorOutput.swift; sourceTree = "<group>"; };
 		FAD5273029EC7BF70047F11E /* StartInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartInteractorInput.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 			children = (
 				FA97DD0E29E1C7EC0069DEB2 /* ViewController */,
 				FA97DD1129E1C8180069DEB2 /* Interactor */,
-				FA97DD1029E1C8010069DEB2 /* Presentor */,
+				FA97DD1029E1C8010069DEB2 /* Presenter */,
 				FA97DD1229E1C8210069DEB2 /* Router */,
 				FA97DD1329E1C82D0069DEB2 /* Factory */,
 			);
@@ -174,7 +174,7 @@
 			children = (
 				FA97DD1829E1C87C0069DEB2 /* ViewController */,
 				FA97DD1629E1C86C0069DEB2 /* Interactor */,
-				FA97DD1729E1C8730069DEB2 /* Presetntor */,
+				FA97DD1729E1C8730069DEB2 /* Presetnter */,
 				FA97DD1529E1C8620069DEB2 /* Router */,
 				FA97DD1429E1C8570069DEB2 /* Factory */,
 			);
@@ -186,8 +186,8 @@
 			children = (
 				FA97DD0F29E1C7F50069DEB2 /* View */,
 				FA97DD2429E1CAE70069DEB2 /* RegistrationViewController.swift */,
-				FA97DD3029E1CD3D0069DEB2 /* RegistrationViewControllerOutput.swift */,
 				FA97DD3229E1CDD60069DEB2 /* RegistrationViewControllerInput.swift */,
+				FA97DD3029E1CD3D0069DEB2 /* RegistrationViewControllerOutput.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -200,20 +200,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		FA97DD1029E1C8010069DEB2 /* Presentor */ = {
+		FA97DD1029E1C8010069DEB2 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				FA97DD2C29E1CBA20069DEB2 /* RegistrationPresentor.swift */,
+				FA97DD2C29E1CBA20069DEB2 /* RegistrationPresenter.swift */,
 			);
-			path = Presentor;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		FA97DD1129E1C8180069DEB2 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
 				FA97DD2E29E1CBB20069DEB2 /* RegistrationInteractor.swift */,
-				FA97DD3429E1D67A0069DEB2 /* RegistrationInteractorOutput.swift */,
 				FA97DD3629E1D6940069DEB2 /* RegistrationInteractorInput.swift */,
+				FA97DD3429E1D67A0069DEB2 /* RegistrationInteractorOutput.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -260,12 +260,12 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		FA97DD1729E1C8730069DEB2 /* Presetntor */ = {
+		FA97DD1729E1C8730069DEB2 /* Presetnter */ = {
 			isa = PBXGroup;
 			children = (
-				FAB5C78E29F16AD800C34190 /* AutorizationPresentor.swift */,
+				FAB5C78E29F16AD800C34190 /* AutorizationPresenter.swift */,
 			);
-			path = Presetntor;
+			path = Presetnter;
 			sourceTree = "<group>";
 		};
 		FA97DD1829E1C87C0069DEB2 /* ViewController */ = {
@@ -338,7 +338,7 @@
 			children = (
 				FAD5271829EC784E0047F11E /* ViewController */,
 				FAD5271B29EC78780047F11E /* Interactor */,
-				FAD5271C29EC78850047F11E /* Presentor */,
+				FAD5271C29EC78850047F11E /* Presenter */,
 				FAD5271A29EC78720047F11E /* Router */,
 				FAD5271929EC78560047F11E /* Factory */,
 			);
@@ -383,12 +383,12 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		FAD5271C29EC78850047F11E /* Presentor */ = {
+		FAD5271C29EC78850047F11E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				FAD5272A29EC7B7A0047F11E /* StartPresentor.swift */,
+				FAD5272A29EC7B7A0047F11E /* StartPresenter.swift */,
 			);
-			path = Presentor;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		FAD5271D29EC78AA0047F11E /* View */ = {
@@ -492,12 +492,12 @@
 				FAD5271F29EC78BE0047F11E /* StartViewContoller.swift in Sources */,
 				FAFECBBB29E5AE0B00A37E8B /* Extantion + UIView.swift in Sources */,
 				FA97DD2329E1CA0D0069DEB2 /* BaseCoordinator.swift in Sources */,
-				FAB5C78F29F16AD800C34190 /* AutorizationPresentor.swift in Sources */,
+				FAB5C78F29F16AD800C34190 /* AutorizationPresenter.swift in Sources */,
 				FA97DD3529E1D67A0069DEB2 /* RegistrationInteractorOutput.swift in Sources */,
 				FAD5272929EC7B330047F11E /* StartRouter.swift in Sources */,
 				FAD5272129EC78D80047F11E /* StartView.swift in Sources */,
-				FAD5272B29EC7B7A0047F11E /* StartPresentor.swift in Sources */,
-				FA97DD2D29E1CBA20069DEB2 /* RegistrationPresentor.swift in Sources */,
+				FAD5272B29EC7B7A0047F11E /* StartPresenter.swift in Sources */,
+				FA97DD2D29E1CBA20069DEB2 /* RegistrationPresenter.swift in Sources */,
 				FA97DD2929E1CB790069DEB2 /* RegistrationFactory.swift in Sources */,
 				FA97DD3129E1CD3D0069DEB2 /* RegistrationViewControllerOutput.swift in Sources */,
 				FA97DD2F29E1CBB20069DEB2 /* RegistrationInteractor.swift in Sources */,

@@ -1,6 +1,4 @@
-import Foundation
-
-final class AutorizationPresentor{
+final class AutorizationPresenter{
     weak var viewController: AutorizationViewControllerInput?
     weak var interactor: AutorizationInteractorInput?
     let router: AutorizationRouter
@@ -10,15 +8,15 @@ final class AutorizationPresentor{
     }
 }
 
-extension AutorizationPresentor: AutorizationViewControllerOutput {
+extension AutorizationPresenter: AutorizationViewControllerOutput {
 
 }
 
-extension AutorizationPresentor: AutorizationViewDelegate {
+extension AutorizationPresenter: AutorizationViewDelegate {
 //    func buttonTapped() {
 //        router.openAutorizationVC()
 //    }
 }
 
-extension AutorizationPresentor: AutorizationInteractorOutput {}
+extension AutorizationPresenter: AutorizationInteractorOutput {}
 

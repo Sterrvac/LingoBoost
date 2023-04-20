@@ -1,7 +1,7 @@
 struct AutorizationFactory{
     func build() -> AutorizationViewController {
         let router = AutorizationRouter()
-        let presenter = AutorizationPresentor(router: router)
+        let presenter = AutorizationPresenter(router: router)
         let interactor = AutorizationInteractor(presenterDelegate: presenter)
         let viewController = AutorizationViewController(presenterDelegate: presenter)
         
