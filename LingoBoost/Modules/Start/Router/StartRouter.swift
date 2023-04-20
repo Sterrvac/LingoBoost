@@ -11,4 +11,8 @@ final class StartRouter {
         let registrationViewController = RegistrationFactory().build()
         startViewController?.navigationController?.pushViewController(registrationViewController, animated: true)
     }
+    func openTrialModeVC() {
+        let trialModeViewController = TrialModeFactory().build()
+        startViewController?.navigationController?.pushViewController(trialModeViewController, animated: true)
+    }
 }

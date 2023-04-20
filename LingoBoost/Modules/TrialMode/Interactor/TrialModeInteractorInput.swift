@@ -1,0 +1,1 @@
+protocol TrialModeInteractorInput: AnyObject {}

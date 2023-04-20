@@ -1,2 +1,1 @@
-protocol StartViewControllerOutput: AnyObject {
-}
+protocol StartViewControllerOutput: AnyObject {}

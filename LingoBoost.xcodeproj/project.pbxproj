@@ -32,6 +32,16 @@
 		FAB5C79329F16D2F00C34190 /* AutorizationViewControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C79229F16D2F00C34190 /* AutorizationViewControllerOutput.swift */; };
 		FAB5C79529F16D8100C34190 /* AutorizationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C79429F16D8100C34190 /* AutorizationRouter.swift */; };
 		FAB5C79729F16EA100C34190 /* AutorizationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C79629F16EA100C34190 /* AutorizationFactory.swift */; };
+		FAB5C7A029F1824B00C34190 /* TrialModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C79F29F1824B00C34190 /* TrialModeViewController.swift */; };
+		FAB5C7A229F1827600C34190 /* TrialModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C7A129F1827600C34190 /* TrialModeView.swift */; };
+		FAB5C7A429F182A500C34190 /* TrialModeViewContollerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C7A329F182A500C34190 /* TrialModeViewContollerInput.swift */; };
+		FAB5C7A629F182C200C34190 /* TrialModeViewControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C7A529F182C200C34190 /* TrialModeViewControllerOutput.swift */; };
+		FAB5C7A829F1830500C34190 /* TrialModeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C7A729F1830500C34190 /* TrialModeInteractor.swift */; };
+		FAB5C7AA29F1835D00C34190 /* TrialModePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C7A929F1835D00C34190 /* TrialModePresenter.swift */; };
+		FAB5C7AC29F1837000C34190 /* TrialModeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C7AB29F1837000C34190 /* TrialModeRouter.swift */; };
+		FAB5C7AE29F1839E00C34190 /* TrialModeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C7AD29F1839E00C34190 /* TrialModeFactory.swift */; };
+		FAB5C7B029F183FE00C34190 /* TrialModeInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C7AF29F183FE00C34190 /* TrialModeInteractorInput.swift */; };
+		FAB5C7B229F1841500C34190 /* TrialModeInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C7B129F1841500C34190 /* TrialModeInteractorOutput.swift */; };
 		FAD5271F29EC78BE0047F11E /* StartViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5271E29EC78BE0047F11E /* StartViewContoller.swift */; };
 		FAD5272129EC78D80047F11E /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5272029EC78D80047F11E /* StartView.swift */; };
 		FAD5272329EC79FF0047F11E /* StartViewControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5272229EC79FF0047F11E /* StartViewControllerOutput.swift */; };
@@ -74,6 +84,16 @@
 		FAB5C79229F16D2F00C34190 /* AutorizationViewControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationViewControllerOutput.swift; sourceTree = "<group>"; };
 		FAB5C79429F16D8100C34190 /* AutorizationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationRouter.swift; sourceTree = "<group>"; };
 		FAB5C79629F16EA100C34190 /* AutorizationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizationFactory.swift; sourceTree = "<group>"; };
+		FAB5C79F29F1824B00C34190 /* TrialModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialModeViewController.swift; sourceTree = "<group>"; };
+		FAB5C7A129F1827600C34190 /* TrialModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialModeView.swift; sourceTree = "<group>"; };
+		FAB5C7A329F182A500C34190 /* TrialModeViewContollerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialModeViewContollerInput.swift; sourceTree = "<group>"; };
+		FAB5C7A529F182C200C34190 /* TrialModeViewControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialModeViewControllerOutput.swift; sourceTree = "<group>"; };
+		FAB5C7A729F1830500C34190 /* TrialModeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialModeInteractor.swift; sourceTree = "<group>"; };
+		FAB5C7A929F1835D00C34190 /* TrialModePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialModePresenter.swift; sourceTree = "<group>"; };
+		FAB5C7AB29F1837000C34190 /* TrialModeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialModeRouter.swift; sourceTree = "<group>"; };
+		FAB5C7AD29F1839E00C34190 /* TrialModeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialModeFactory.swift; sourceTree = "<group>"; };
+		FAB5C7AF29F183FE00C34190 /* TrialModeInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialModeInteractorInput.swift; sourceTree = "<group>"; };
+		FAB5C7B129F1841500C34190 /* TrialModeInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialModeInteractorOutput.swift; sourceTree = "<group>"; };
 		FAD5271E29EC78BE0047F11E /* StartViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewContoller.swift; sourceTree = "<group>"; };
 		FAD5272029EC78D80047F11E /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		FAD5272229EC79FF0047F11E /* StartViewControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewControllerOutput.swift; sourceTree = "<group>"; };
@@ -153,6 +173,7 @@
 				FAD5271729EC782F0047F11E /* Start */,
 				FA97DD0D29E1C7DA0069DEB2 /* Autorization */,
 				FA97DD0C29E1C7D00069DEB2 /* Registration */,
+				FAB5C79829F1812C00C34190 /* TrialMode */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -333,6 +354,71 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		FAB5C79829F1812C00C34190 /* TrialMode */ = {
+			isa = PBXGroup;
+			children = (
+				FAB5C79929F181C700C34190 /* ViewController */,
+				FAB5C79A29F181CF00C34190 /* Interactor */,
+				FAB5C79D29F1821300C34190 /* Presenter */,
+				FAB5C79C29F1820700C34190 /* Router */,
+				FAB5C79B29F181F900C34190 /* Factory */,
+			);
+			path = TrialMode;
+			sourceTree = "<group>";
+		};
+		FAB5C79929F181C700C34190 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FAB5C79E29F1822600C34190 /* View */,
+				FAB5C79F29F1824B00C34190 /* TrialModeViewController.swift */,
+				FAB5C7A329F182A500C34190 /* TrialModeViewContollerInput.swift */,
+				FAB5C7A529F182C200C34190 /* TrialModeViewControllerOutput.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FAB5C79A29F181CF00C34190 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FAB5C7A729F1830500C34190 /* TrialModeInteractor.swift */,
+				FAB5C7AF29F183FE00C34190 /* TrialModeInteractorInput.swift */,
+				FAB5C7B129F1841500C34190 /* TrialModeInteractorOutput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		FAB5C79B29F181F900C34190 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				FAB5C7AD29F1839E00C34190 /* TrialModeFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		FAB5C79C29F1820700C34190 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FAB5C7AB29F1837000C34190 /* TrialModeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FAB5C79D29F1821300C34190 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FAB5C7A929F1835D00C34190 /* TrialModePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FAB5C79E29F1822600C34190 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAB5C7A129F1827600C34190 /* TrialModeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FAD5271729EC782F0047F11E /* Start */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,8 +564,11 @@
 				FAB5C78B29F167A000C34190 /* AutorizationInteractorInput.swift in Sources */,
 				FAD5272329EC79FF0047F11E /* StartViewControllerOutput.swift in Sources */,
 				FAD5272D29EC7BBB0047F11E /* StartInteractor.swift in Sources */,
+				FAB5C7B229F1841500C34190 /* TrialModeInteractorOutput.swift in Sources */,
 				FA217DA829EBC06C0056A9FC /* AutorizationView.swift in Sources */,
 				FA217DAA29EC4EC80056A9FC /* TestAutorizationApple.swift in Sources */,
+				FAB5C7A629F182C200C34190 /* TrialModeViewControllerOutput.swift in Sources */,
+				FAB5C7A829F1830500C34190 /* TrialModeInteractor.swift in Sources */,
 				FA97DD2529E1CAE70069DEB2 /* RegistrationViewController.swift in Sources */,
 				FA97DD3329E1CDD60069DEB2 /* RegistrationViewControllerInput.swift in Sources */,
 				FAB5C78D29F167BD00C34190 /* AutorizationInteractorOutput.swift in Sources */,
@@ -490,10 +579,12 @@
 				FAB5C79529F16D8100C34190 /* AutorizationRouter.swift in Sources */,
 				FAD5272529EC7A490047F11E /* StartViewControllerInput.swift in Sources */,
 				FAD5271F29EC78BE0047F11E /* StartViewContoller.swift in Sources */,
+				FAB5C7AC29F1837000C34190 /* TrialModeRouter.swift in Sources */,
 				FAFECBBB29E5AE0B00A37E8B /* Extantion + UIView.swift in Sources */,
 				FA97DD2329E1CA0D0069DEB2 /* BaseCoordinator.swift in Sources */,
 				FAB5C78F29F16AD800C34190 /* AutorizationPresenter.swift in Sources */,
 				FA97DD3529E1D67A0069DEB2 /* RegistrationInteractorOutput.swift in Sources */,
+				FAB5C7B029F183FE00C34190 /* TrialModeInteractorInput.swift in Sources */,
 				FAD5272929EC7B330047F11E /* StartRouter.swift in Sources */,
 				FAD5272129EC78D80047F11E /* StartView.swift in Sources */,
 				FAD5272B29EC7B7A0047F11E /* StartPresenter.swift in Sources */,
@@ -501,10 +592,15 @@
 				FA97DD2929E1CB790069DEB2 /* RegistrationFactory.swift in Sources */,
 				FA97DD3129E1CD3D0069DEB2 /* RegistrationViewControllerOutput.swift in Sources */,
 				FA97DD2F29E1CBB20069DEB2 /* RegistrationInteractor.swift in Sources */,
+				FAB5C7AA29F1835D00C34190 /* TrialModePresenter.swift in Sources */,
 				FAB5C78929F1675B00C34190 /* AutorizationInteractor.swift in Sources */,
 				FAB5C79329F16D2F00C34190 /* AutorizationViewControllerOutput.swift in Sources */,
 				FA217DA629EBBFA30056A9FC /* AutorizationViewController.swift in Sources */,
 				FA97DD2729E1CB310069DEB2 /* RegistrationView.swift in Sources */,
+				FAB5C7A229F1827600C34190 /* TrialModeView.swift in Sources */,
+				FAB5C7A029F1824B00C34190 /* TrialModeViewController.swift in Sources */,
+				FAB5C7AE29F1839E00C34190 /* TrialModeFactory.swift in Sources */,
+				FAB5C7A429F182A500C34190 /* TrialModeViewContollerInput.swift in Sources */,
 				FAD5272729EC7B030047F11E /* StartFactory.swift in Sources */,
 				FAB5C79729F16EA100C34190 /* AutorizationFactory.swift in Sources */,
 				FA97DD3729E1D6940069DEB2 /* RegistrationInteractorInput.swift in Sources */,

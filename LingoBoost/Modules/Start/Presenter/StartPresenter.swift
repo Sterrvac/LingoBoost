@@ -20,6 +20,10 @@ extension StartPresenter: StartViewDelegate {
     func buttonTappedRegistration() {
         router.openRegistrationVC()
     }
+    
+    func buttonTappedTrialMode() {
+        router.openTrialModeVC()
+    }
 }
 
 extension StartPresenter: StartInteractorOutput {}

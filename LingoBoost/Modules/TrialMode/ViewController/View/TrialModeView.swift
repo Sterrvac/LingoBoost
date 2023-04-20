@@ -1,15 +1,14 @@
 import UIKit
 
-protocol AutorizationViewDelegate {
-}
+protocol TrialModeViewDelegate {}
 
-final class AutorizationView: UIView {
+final class TrialModeView: UIView {
     
-    var delegate: AutorizationViewDelegate?
+    var delegate: TrialModeViewDelegate?
     
     override init(frame: CGRect = UIScreen.main.bounds) {
         super.init(frame: frame)
-        backgroundColor = .systemGray
+        backgroundColor = .systemGreen
     }
     
     required init?(coder: NSCoder) {

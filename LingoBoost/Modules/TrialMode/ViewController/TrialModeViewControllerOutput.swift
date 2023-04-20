@@ -1,0 +1,1 @@
+protocol TrialModeViewControllerOutput: AnyObject {}

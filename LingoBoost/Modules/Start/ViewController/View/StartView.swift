@@ -5,6 +5,7 @@ import AuthenticationServices
 protocol StartViewDelegate {
     func buttonTappedAutorization()
     func buttonTappedRegistration()
+    func buttonTappedTrialMode()
 }
 // Настройка всех компонентов, вынести все в appearance
 extension StartView {
@@ -71,13 +72,13 @@ final class StartView: UIView, ASAuthorizationControllerDelegate, ASAuthorizatio
         return button
     }()
     
-    private lazy var testButton: UIButton = {
+    private lazy var trialModeButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("TestMode", for: .normal)
         button.backgroundColor = .systemGreen
         button.layer.cornerRadius = 8
         button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(buttonAutorization), for: .touchUpInside)
+        button.addTarget(self, action: #selector(buttonTrialMode), for: .touchUpInside)
         return button
     }()
     
@@ -108,7 +109,7 @@ extension StartView {
                             textTitleLabel,
                             registrationButton,
                             autorizationButton,
-                            testButton,
+                            trialModeButton,
                             appleLogInButton])
     }
     func configurationConstrantion() {
@@ -138,7 +139,7 @@ extension StartView {
             make.leading.equalTo(registrationButton)
             make.size.equalTo(self.appearance.sizeButton)
         }
-        testButton.snp.makeConstraints { make in
+        trialModeButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(autorizationButton.snp.bottom).offset(25)
             make.leading.equalTo(autorizationButton)
@@ -146,7 +147,7 @@ extension StartView {
         }
         appleLogInButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(testButton.snp.bottom).offset(50)
+            make.top.equalTo(trialModeButton.snp.bottom).offset(50)
             make.size.equalTo(self.appearance.sizeButtonAuto)
             
         }
@@ -160,6 +161,9 @@ extension StartView {
     }
     @objc func buttonRegistration() {
         delegate?.buttonTappedRegistration()
+    }
+    @objc func buttonTrialMode() {
+        delegate?.buttonTappedTrialMode()
     }
     // Должен вызываться отдельный модуль
     @objc func handleLogInWithAppleID() {
