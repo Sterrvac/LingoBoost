@@ -12,7 +12,7 @@ public class RIButton: UIButton {
     
     public func configurateButton() {
         backgroundColor = .systemGray
-        layer.cornerRadius = 8
+        layer.cornerRadius = 15
         setTitleColor(.white, for: .normal)
     }
 }

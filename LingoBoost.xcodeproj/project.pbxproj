@@ -44,6 +44,7 @@
 		FAB5C7B229F1841500C34190 /* TrialModeInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C7B129F1841500C34190 /* TrialModeInteractorOutput.swift */; };
 		FAC67FB829F66A3D0008DCEE /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC67FB729F66A3D0008DCEE /* UIComponents.swift */; };
 		FAC67FBB29F66A710008DCEE /* RIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC67FBA29F66A710008DCEE /* RIButton.swift */; };
+		FAC67FBE29F6F17F0008DCEE /* RITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC67FBD29F6F17F0008DCEE /* RITextField.swift */; };
 		FAD5271F29EC78BE0047F11E /* StartViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5271E29EC78BE0047F11E /* StartViewContoller.swift */; };
 		FAD5272129EC78D80047F11E /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5272029EC78D80047F11E /* StartView.swift */; };
 		FAD5272329EC79FF0047F11E /* StartViewControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5272229EC79FF0047F11E /* StartViewControllerOutput.swift */; };
@@ -98,6 +99,7 @@
 		FAB5C7B129F1841500C34190 /* TrialModeInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialModeInteractorOutput.swift; sourceTree = "<group>"; };
 		FAC67FB729F66A3D0008DCEE /* UIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
 		FAC67FBA29F66A710008DCEE /* RIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIButton.swift; sourceTree = "<group>"; };
+		FAC67FBD29F6F17F0008DCEE /* RITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RITextField.swift; sourceTree = "<group>"; };
 		FAD5271E29EC78BE0047F11E /* StartViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewContoller.swift; sourceTree = "<group>"; };
 		FAD5272029EC78D80047F11E /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		FAD5272229EC79FF0047F11E /* StartViewControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewControllerOutput.swift; sourceTree = "<group>"; };
@@ -175,8 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				FAD5271729EC782F0047F11E /* Start */,
-				FA97DD0D29E1C7DA0069DEB2 /* Autorization */,
 				FA97DD0C29E1C7D00069DEB2 /* Registration */,
+				FA97DD0D29E1C7DA0069DEB2 /* Autorization */,
 				FAB5C79829F1812C00C34190 /* TrialMode */,
 			);
 			path = Modules;
@@ -427,6 +429,7 @@
 		FAC67FB629F669DA0008DCEE /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				FAC67FBC29F6F1620008DCEE /* RITextField */,
 				FAC67FB929F66A400008DCEE /* RIButton */,
 				FAC67FB729F66A3D0008DCEE /* UIComponents.swift */,
 			);
@@ -439,6 +442,14 @@
 				FAC67FBA29F66A710008DCEE /* RIButton.swift */,
 			);
 			path = RIButton;
+			sourceTree = "<group>";
+		};
+		FAC67FBC29F6F1620008DCEE /* RITextField */ = {
+			isa = PBXGroup;
+			children = (
+				FAC67FBD29F6F17F0008DCEE /* RITextField.swift */,
+			);
+			path = RITextField;
 			sourceTree = "<group>";
 		};
 		FAD5271729EC782F0047F11E /* Start */ = {
@@ -605,6 +616,7 @@
 				FAFECBBB29E5AE0B00A37E8B /* Extantion + UIView.swift in Sources */,
 				FA97DD2329E1CA0D0069DEB2 /* BaseCoordinator.swift in Sources */,
 				FAB5C78F29F16AD800C34190 /* AutorizationPresenter.swift in Sources */,
+				FAC67FBE29F6F17F0008DCEE /* RITextField.swift in Sources */,
 				FA97DD3529E1D67A0069DEB2 /* RegistrationInteractorOutput.swift in Sources */,
 				FAB5C7B029F183FE00C34190 /* TrialModeInteractorInput.swift in Sources */,
 				FAD5272929EC7B330047F11E /* StartRouter.swift in Sources */,
