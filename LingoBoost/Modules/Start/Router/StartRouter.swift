@@ -15,4 +15,5 @@ final class StartRouter {
         let trialModeViewController = TrialModeFactory().build()
         startViewController?.navigationController?.pushViewController(trialModeViewController, animated: true)
     }
+    func openAppleIdVC() {}
 }

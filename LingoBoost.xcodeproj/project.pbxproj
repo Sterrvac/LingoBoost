@@ -42,6 +42,8 @@
 		FAB5C7AE29F1839E00C34190 /* TrialModeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C7AD29F1839E00C34190 /* TrialModeFactory.swift */; };
 		FAB5C7B029F183FE00C34190 /* TrialModeInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C7AF29F183FE00C34190 /* TrialModeInteractorInput.swift */; };
 		FAB5C7B229F1841500C34190 /* TrialModeInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5C7B129F1841500C34190 /* TrialModeInteractorOutput.swift */; };
+		FAC67FB829F66A3D0008DCEE /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC67FB729F66A3D0008DCEE /* UIComponents.swift */; };
+		FAC67FBB29F66A710008DCEE /* RIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC67FBA29F66A710008DCEE /* RIButton.swift */; };
 		FAD5271F29EC78BE0047F11E /* StartViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5271E29EC78BE0047F11E /* StartViewContoller.swift */; };
 		FAD5272129EC78D80047F11E /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5272029EC78D80047F11E /* StartView.swift */; };
 		FAD5272329EC79FF0047F11E /* StartViewControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5272229EC79FF0047F11E /* StartViewControllerOutput.swift */; };
@@ -94,6 +96,8 @@
 		FAB5C7AD29F1839E00C34190 /* TrialModeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialModeFactory.swift; sourceTree = "<group>"; };
 		FAB5C7AF29F183FE00C34190 /* TrialModeInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialModeInteractorInput.swift; sourceTree = "<group>"; };
 		FAB5C7B129F1841500C34190 /* TrialModeInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialModeInteractorOutput.swift; sourceTree = "<group>"; };
+		FAC67FB729F66A3D0008DCEE /* UIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
+		FAC67FBA29F66A710008DCEE /* RIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIButton.swift; sourceTree = "<group>"; };
 		FAD5271E29EC78BE0047F11E /* StartViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewContoller.swift; sourceTree = "<group>"; };
 		FAD5272029EC78D80047F11E /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		FAD5272229EC79FF0047F11E /* StartViewControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewControllerOutput.swift; sourceTree = "<group>"; };
@@ -318,6 +322,7 @@
 		FA97DD1B29E1C9240069DEB2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FAC67FB629F669DA0008DCEE /* UIComponents */,
 				FA97DD1E29E1C9420069DEB2 /* Resourses */,
 				FA97DD1C29E1C92D0069DEB2 /* Extantions */,
 			);
@@ -417,6 +422,23 @@
 				FAB5C7A129F1827600C34190 /* TrialModeView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FAC67FB629F669DA0008DCEE /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				FAC67FB929F66A400008DCEE /* RIButton */,
+				FAC67FB729F66A3D0008DCEE /* UIComponents.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		FAC67FB929F66A400008DCEE /* RIButton */ = {
+			isa = PBXGroup;
+			children = (
+				FAC67FBA29F66A710008DCEE /* RIButton.swift */,
+			);
+			path = RIButton;
 			sourceTree = "<group>";
 		};
 		FAD5271729EC782F0047F11E /* Start */ = {
@@ -589,6 +611,7 @@
 				FAD5272129EC78D80047F11E /* StartView.swift in Sources */,
 				FAD5272B29EC7B7A0047F11E /* StartPresenter.swift in Sources */,
 				FA97DD2D29E1CBA20069DEB2 /* RegistrationPresenter.swift in Sources */,
+				FAC67FB829F66A3D0008DCEE /* UIComponents.swift in Sources */,
 				FA97DD2929E1CB790069DEB2 /* RegistrationFactory.swift in Sources */,
 				FA97DD3129E1CD3D0069DEB2 /* RegistrationViewControllerOutput.swift in Sources */,
 				FA97DD2F29E1CBB20069DEB2 /* RegistrationInteractor.swift in Sources */,
@@ -596,6 +619,7 @@
 				FAB5C78929F1675B00C34190 /* AutorizationInteractor.swift in Sources */,
 				FAB5C79329F16D2F00C34190 /* AutorizationViewControllerOutput.swift in Sources */,
 				FA217DA629EBBFA30056A9FC /* AutorizationViewController.swift in Sources */,
+				FAC67FBB29F66A710008DCEE /* RIButton.swift in Sources */,
 				FA97DD2729E1CB310069DEB2 /* RegistrationView.swift in Sources */,
 				FAB5C7A229F1827600C34190 /* TrialModeView.swift in Sources */,
 				FAB5C7A029F1824B00C34190 /* TrialModeViewController.swift in Sources */,

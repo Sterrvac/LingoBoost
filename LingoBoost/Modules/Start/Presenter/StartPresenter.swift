@@ -13,15 +13,19 @@ extension StartPresenter: StartViewControllerOutput {
 }
 
 extension StartPresenter: StartViewDelegate {
-    func buttonTappedAutorization() {
+    func buttonAppleId() {
+        router.openAppleIdVC()
+    }
+    
+    func buttonAutorization() {
         router.openAutorizationVC()
     }
     
-    func buttonTappedRegistration() {
+    func buttonRegistration() {
         router.openRegistrationVC()
     }
     
-    func buttonTappedTrialMode() {
+    func buttonTrialMode() {
         router.openTrialModeVC()
     }
 }

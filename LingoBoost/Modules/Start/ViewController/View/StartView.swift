@@ -3,11 +3,14 @@ import SnapKit
 import AuthenticationServices
 
 protocol StartViewDelegate {
-    func buttonTappedAutorization()
-    func buttonTappedRegistration()
-    func buttonTappedTrialMode()
+    func buttonAutorization()
+    func buttonRegistration()
+    func buttonTrialMode()
+    func buttonAppleId()
 }
-// Настройка всех компонентов, вынести все в appearance
+
+// MARK: - Appearance
+
 extension StartView {
     struct Appearance {
         let sizeButton: CGSize = CGSize(width: 400, height: 50)
@@ -17,8 +20,7 @@ extension StartView {
     }
 }
 
-// Ext вынести
-final class StartView: UIView, ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+final class StartView: UIView {
     
     var delegate: StartViewDelegate?
     
@@ -52,33 +54,28 @@ final class StartView: UIView, ASAuthorizationControllerDelegate, ASAuthorizatio
         return label
     }()
     
-    private lazy var autorizationButton: UIButton = {
-        let button = UIButton(type: .system)
+    private lazy var autorizationButton: RIButton = {
+        let button = RIButton(type: .system)
+        button.configurateButton()
         button.setTitle("Autorization", for: .normal)
-        button.backgroundColor = .systemGray
-        button.layer.cornerRadius = 8
-        button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(buttonAutorization), for: .touchUpInside)
         return button
     }()
     
-    private lazy var registrationButton: UIButton = {
-        let button = UIButton(type: .system)
+    private lazy var registrationButton: RIButton = {
+        let button = RIButton(type: .system)
+        button.configurateButton()
         button.setTitle("Registration", for: .normal)
-        button.backgroundColor = .systemGray
-        button.layer.cornerRadius = 8
-        button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(buttonRegistration), for: .touchUpInside)
         return button
     }()
     
-    private lazy var trialModeButton: UIButton = {
-        let button = UIButton(type: .system)
+    private lazy var trialModeButton: RIButton = {
+        let button = RIButton(type: .system)
+        button.configurateButton()
         button.setTitle("TestMode", for: .normal)
-        button.backgroundColor = .systemGreen
-        button.layer.cornerRadius = 8
-        button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(buttonTrialMode), for: .touchUpInside)
+        button.backgroundColor = .systemGreen
         return button
     }()
     
@@ -91,7 +88,6 @@ final class StartView: UIView, ASAuthorizationControllerDelegate, ASAuthorizatio
     init(frame: CGRect = UIScreen.main.bounds, delegate: StartViewDelegate) {
         self.delegate = delegate
         super.init(frame: frame)
-//        let controller = ASAuthorizationController()
         configuratedView()
         configurationConstrantion()
     }
@@ -152,28 +148,20 @@ extension StartView {
             
         }
     }
-    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
-        return inputView as! ASPresentationAnchor
-    }
     
     @objc func buttonAutorization() {
-        delegate?.buttonTappedAutorization()
+        delegate?.buttonAutorization()
     }
     @objc func buttonRegistration() {
-        delegate?.buttonTappedRegistration()
+        delegate?.buttonRegistration()
     }
     @objc func buttonTrialMode() {
-        delegate?.buttonTappedTrialMode()
+        delegate?.buttonTrialMode()
     }
     // Должен вызываться отдельный модуль
     @objc func handleLogInWithAppleID() {
-         let request = ASAuthorizationAppleIDProvider().createRequest()
-         request.requestedScopes = [.fullName, .email]
-         
-         
-//         controller.delegate = self
-//         controller.presentationContextProvider = self
-//
-//         controller.performRequests()
+        delegate?.buttonAppleId()
+        let request = ASAuthorizationAppleIDProvider().createRequest()
+        request.requestedScopes = [.fullName, .email]
      }
 }
