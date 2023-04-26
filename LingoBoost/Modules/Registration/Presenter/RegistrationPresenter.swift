@@ -13,9 +13,7 @@ extension RegistrationPresenter: RegistrationViewControllerOutput {
 }
 
 extension RegistrationPresenter: RegistrationViewDelegate {
-//    func buttonTapped() {
-//        router.openAutorizationVC()
-//    }
+    func registration() {}
 }
 
 extension RegistrationPresenter: RegistrationInteractorOutput {}

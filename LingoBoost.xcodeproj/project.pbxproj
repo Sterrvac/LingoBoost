@@ -55,6 +55,7 @@
 		FAD5272D29EC7BBB0047F11E /* StartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5272C29EC7BBB0047F11E /* StartInteractor.swift */; };
 		FAD5272F29EC7BE60047F11E /* StartInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5272E29EC7BE60047F11E /* StartInteractorOutput.swift */; };
 		FAD5273129EC7BF70047F11E /* StartInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5273029EC7BF70047F11E /* StartInteractorInput.swift */; };
+		FAF5C7F129F9497B003CBC5D /* CustomSwitchButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF5C7F029F9497B003CBC5D /* CustomSwitchButtonView.swift */; };
 		FAFECBB929E5AD0D00A37E8B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FAFECBB829E5AD0D00A37E8B /* SnapKit */; };
 		FAFECBBB29E5AE0B00A37E8B /* Extantion + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFECBBA29E5AE0B00A37E8B /* Extantion + UIView.swift */; };
 /* End PBXBuildFile section */
@@ -110,6 +111,7 @@
 		FAD5272C29EC7BBB0047F11E /* StartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartInteractor.swift; sourceTree = "<group>"; };
 		FAD5272E29EC7BE60047F11E /* StartInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartInteractorOutput.swift; sourceTree = "<group>"; };
 		FAD5273029EC7BF70047F11E /* StartInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartInteractorInput.swift; sourceTree = "<group>"; };
+		FAF5C7F029F9497B003CBC5D /* CustomSwitchButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitchButtonView.swift; sourceTree = "<group>"; };
 		FAFECBBA29E5AE0B00A37E8B /* Extantion + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extantion + UIView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				FA97DD2629E1CB310069DEB2 /* RegistrationView.swift */,
+				FAF5C7F029F9497B003CBC5D /* CustomSwitchButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -637,6 +640,7 @@
 				FAB5C7A029F1824B00C34190 /* TrialModeViewController.swift in Sources */,
 				FAB5C7AE29F1839E00C34190 /* TrialModeFactory.swift in Sources */,
 				FAB5C7A429F182A500C34190 /* TrialModeViewContollerInput.swift in Sources */,
+				FAF5C7F129F9497B003CBC5D /* CustomSwitchButtonView.swift in Sources */,
 				FAD5272729EC7B030047F11E /* StartFactory.swift in Sources */,
 				FAB5C79729F16EA100C34190 /* AutorizationFactory.swift in Sources */,
 				FA97DD3729E1D6940069DEB2 /* RegistrationInteractorInput.swift in Sources */,

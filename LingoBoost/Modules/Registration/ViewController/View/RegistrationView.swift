@@ -2,6 +2,7 @@ import UIKit
 import SnapKit
 
 protocol RegistrationViewDelegate {
+    func registration()
 }
 
 final class RegistrationView: UIView {
@@ -48,16 +49,17 @@ final class RegistrationView: UIView {
         return label
     }()
     
-    private let selectionLanguage: UIButton = {
-        let button = UIButton()
-        button.titleLabel?.text = "Английский"
-        return button
+    private let customSwitchButton: CustomSwitchButton = {
+        let customSwitchButton = CustomSwitchButton()
+        return customSwitchButton
     }()
-    // MARK: - Доделать кнопку наложения
-    private let iconView: UIImageView = {
-        let view = UIImageView()
-        view.image = UIImage(systemName: "chevron.down")
-        return view
+    
+    private lazy var registrationButton: RIButton = {
+        let button = RIButton(type: .system)
+        button.configurateButton()
+        button.setTitle("Registration", for: .normal)
+        button.addTarget(self, action: #selector(registration), for: .touchUpInside)
+        return button
     }()
     
     override init(frame: CGRect = UIScreen.main.bounds) {
@@ -76,10 +78,12 @@ extension RegistrationView {
     func configuratedView() {
         backgroundColor = .white
         addSubViews(items: [titleLabel,
-                           nameTextField,
-                           emailTextField,
-                           passwordTextField,
-                           subTitleLabel])
+                            nameTextField,
+                            emailTextField,
+                            passwordTextField,
+                            subTitleLabel,
+                            customSwitchButton,
+                            registrationButton])
     }
     func configurationConstrantion() {
         titleLabel.snp.makeConstraints { make in
@@ -108,6 +112,20 @@ extension RegistrationView {
             make.top.equalTo(passwordTextField.snp.bottom).offset(35)
             make.leading.equalTo(passwordTextField)
         }
+        customSwitchButton.snp.makeConstraints { make in
+            make.top.equalTo(passwordTextField.snp.bottom).offset(34)
+            make.trailing.equalTo(passwordTextField)
+            make.size.equalTo(appearance.sizeButtonSwitch)
+        }
+        registrationButton.snp.makeConstraints { make in
+            make.top.equalTo(subTitleLabel.snp.bottom).offset(35)
+            make.leading.equalTo(subTitleLabel)
+            make.centerX.equalToSuperview()
+            make.size.equalTo(appearance.sizeButton)
+        }
     }
-}
+    
+    @objc func registration() {
+        delegate?.registration()
+    }}
         
