@@ -13,7 +13,7 @@ final class RegistrationView: UIView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Registration"
+        label.text = "Регистрация"
         label.textAlignment = .center
         label.textColor = .systemGray
         label.font = .systemFont(ofSize: 30)
@@ -22,7 +22,7 @@ final class RegistrationView: UIView {
     
     private let nameTextField: RITextField = {
         let textField = RITextField()
-        textField.placeholder = "Name"
+        textField.placeholder = "Имя"
         textField.configurateTextField()
         return textField
     }()
@@ -36,7 +36,7 @@ final class RegistrationView: UIView {
     
     private let passwordTextField: RITextField = {
         let textField = RITextField()
-        textField.placeholder = "Password"
+        textField.placeholder = "Пароль"
         textField.configurateTextField()
         return textField
     }()
@@ -57,7 +57,7 @@ final class RegistrationView: UIView {
     private lazy var registrationButton: RIButton = {
         let button = RIButton(type: .system)
         button.configurateButton()
-        button.setTitle("Registration", for: .normal)
+        button.setTitle("Регистрация", for: .normal)
         button.addTarget(self, action: #selector(registration), for: .touchUpInside)
         return button
     }()
@@ -127,5 +127,6 @@ extension RegistrationView {
     
     @objc func registration() {
         delegate?.registration()
-    }}
+    }
+}
         

@@ -46,7 +46,7 @@ final class StartView: UIView {
     private lazy var autorizationButton: RIButton = {
         let button = RIButton(type: .system)
         button.configurateButton()
-        button.setTitle("Autorization", for: .normal)
+        button.setTitle("Авторизация", for: .normal)
         button.addTarget(self, action: #selector(buttonAutorization), for: .touchUpInside)
         return button
     }()
@@ -54,7 +54,7 @@ final class StartView: UIView {
     private lazy var registrationButton: RIButton = {
         let button = RIButton(type: .system)
         button.configurateButton()
-        button.setTitle("Registration", for: .normal)
+        button.setTitle("Регистрация", for: .normal)
         button.addTarget(self, action: #selector(buttonRegistration), for: .touchUpInside)
         return button
     }()
@@ -62,7 +62,7 @@ final class StartView: UIView {
     private lazy var trialModeButton: RIButton = {
         let button = RIButton(type: .system)
         button.configurateButton()
-        button.setTitle("TestMode", for: .normal)
+        button.setTitle("Пробный период", for: .normal)
         button.addTarget(self, action: #selector(buttonTrialMode), for: .touchUpInside)
         button.backgroundColor = .systemGreen
         return button
