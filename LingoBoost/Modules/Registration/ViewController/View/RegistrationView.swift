@@ -13,7 +13,7 @@ final class RegistrationView: UIView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Регистрация"
+        label.text = Resourses.Strings.MainHeaders.registration
         label.textAlignment = .center
         label.textColor = .systemGray
         label.font = .systemFont(ofSize: 30)
@@ -22,28 +22,28 @@ final class RegistrationView: UIView {
     
     private let nameTextField: RITextField = {
         let textField = RITextField()
-        textField.placeholder = "Имя"
         textField.configurateTextField()
+        textField.placeholder = Resourses.Strings.MainHeaders.name
         return textField
     }()
     
     private let emailTextField: RITextField = {
         let textField = RITextField()
-        textField.placeholder = "Email"
         textField.configurateTextField()
+        textField.placeholder = Resourses.Strings.MainHeaders.email
         return textField
     }()
     
     private let passwordTextField: RITextField = {
         let textField = RITextField()
-        textField.placeholder = "Пароль"
         textField.configurateTextField()
+        textField.placeholder = Resourses.Strings.MainHeaders.password
         return textField
     }()
     
-    private let subTitleLabel: UILabel = {
+    private let selectionLanguage: UILabel = {
         let label = UILabel()
-        label.text = "Выберите язык:"
+        label.text = Resourses.Strings.MainHeaders.selectionLanguage
         label.textColor = .systemGray
         label.font = .systemFont(ofSize: 14)
         return label
@@ -57,7 +57,7 @@ final class RegistrationView: UIView {
     private lazy var registrationButton: RIButton = {
         let button = RIButton(type: .system)
         button.configurateButton()
-        button.setTitle("Регистрация", for: .normal)
+        button.setTitle(Resourses.Strings.MainHeaders.registration, for: .normal)
         button.addTarget(self, action: #selector(registration), for: .touchUpInside)
         return button
     }()
@@ -81,7 +81,7 @@ extension RegistrationView {
                             nameTextField,
                             emailTextField,
                             passwordTextField,
-                            subTitleLabel,
+                            selectionLanguage,
                             customSwitchButton,
                             registrationButton])
     }
@@ -108,7 +108,7 @@ extension RegistrationView {
             make.top.equalTo(emailTextField.snp.bottom).offset(25)
             make.leading.equalTo(emailTextField)
         }
-        subTitleLabel.snp.makeConstraints { make in
+        selectionLanguage.snp.makeConstraints { make in
             make.top.equalTo(passwordTextField.snp.bottom).offset(35)
             make.leading.equalTo(passwordTextField)
         }
@@ -118,8 +118,8 @@ extension RegistrationView {
             make.size.equalTo(appearance.sizeButtonSwitch)
         }
         registrationButton.snp.makeConstraints { make in
-            make.top.equalTo(subTitleLabel.snp.bottom).offset(35)
-            make.leading.equalTo(subTitleLabel)
+            make.top.equalTo(selectionLanguage.snp.bottom).offset(35)
+            make.leading.equalTo(selectionLanguage)
             make.centerX.equalToSuperview()
             make.size.equalTo(appearance.sizeButton)
         }

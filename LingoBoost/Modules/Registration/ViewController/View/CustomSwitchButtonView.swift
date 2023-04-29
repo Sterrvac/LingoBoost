@@ -5,7 +5,7 @@ class CustomSwitchButton: UIButton {
     
     private let language: UILabel = {
         let label = UILabel()
-        label.text = "Английский"
+        label.text = Resourses.Strings.Language.english
         label.textColor = .systemGray
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false

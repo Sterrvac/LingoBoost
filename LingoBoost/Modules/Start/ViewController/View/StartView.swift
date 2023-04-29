@@ -15,29 +15,29 @@ final class StartView: UIView {
     
     var appearance = Appearance()
     
-    private let titleLabel: UILabel = {
+    private let lingoBoostTitleLabel: UILabel = {
         let label = UILabel()
-        label.text = "LingoBoost"
+        label.text = Resourses.Strings.TextHeaders.lingoBoost
         label.textAlignment = .center
         label.textColor = .systemGray
         label.font = .systemFont(ofSize: 30)
         return label
     }()
     
-    private let subTitleLabel: UILabel = {
+    private let mainTextTitleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 17)
         label.numberOfLines = 0
-        label.text = "Увеличиваем запаc слов на иностранных языках!"
+        label.text = Resourses.Strings.TextHeaders.mainTextStartView
         label.textColor = .systemGray
         return label
     }()
     
-    private let textTitleLabel: UILabel = {
+    private let descriptionTextTitleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 17)
         label.numberOfLines = 0
-        label.text = "Добавляй интересующие тебя слова повторяй их в любое время!"
+        label.text = Resourses.Strings.TextHeaders.descriptionStartView
         label.textAlignment = .right
         label.textColor = .systemGray
         return label
@@ -46,7 +46,7 @@ final class StartView: UIView {
     private lazy var autorizationButton: RIButton = {
         let button = RIButton(type: .system)
         button.configurateButton()
-        button.setTitle("Авторизация", for: .normal)
+        button.setTitle(Resourses.Strings.MainHeaders.autorization, for: .normal)
         button.addTarget(self, action: #selector(buttonAutorization), for: .touchUpInside)
         return button
     }()
@@ -54,7 +54,7 @@ final class StartView: UIView {
     private lazy var registrationButton: RIButton = {
         let button = RIButton(type: .system)
         button.configurateButton()
-        button.setTitle("Регистрация", for: .normal)
+        button.setTitle(Resourses.Strings.MainHeaders.registration, for: .normal)
         button.addTarget(self, action: #selector(buttonRegistration), for: .touchUpInside)
         return button
     }()
@@ -62,7 +62,7 @@ final class StartView: UIView {
     private lazy var trialModeButton: RIButton = {
         let button = RIButton(type: .system)
         button.configurateButton()
-        button.setTitle("Пробный период", for: .normal)
+        button.setTitle(Resourses.Strings.MainHeaders.trialMode, for: .normal)
         button.addTarget(self, action: #selector(buttonTrialMode), for: .touchUpInside)
         button.backgroundColor = .systemGreen
         return button
@@ -90,27 +90,27 @@ final class StartView: UIView {
 extension StartView {
     func configuratedView() {
         backgroundColor = .white
-        addSubViews(items: [titleLabel,
-                            subTitleLabel,
-                            textTitleLabel,
+        addSubViews(items: [lingoBoostTitleLabel,
+                            mainTextTitleLabel,
+                            descriptionTextTitleLabel,
                             registrationButton,
                             autorizationButton,
                             trialModeButton,
                             appleLogInButton])
     }
     func configurationConstrantion() {
-        titleLabel.snp.makeConstraints { make in
+        lingoBoostTitleLabel.snp.makeConstraints { make in
             make.size.equalTo(self.appearance.sizeTitle)
             make.top.equalToSuperview().inset(150)
             make.centerX.equalToSuperview()
         }
-        subTitleLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(25)
+        mainTextTitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(lingoBoostTitleLabel.snp.bottom).offset(25)
             make.size.equalTo(self.appearance.sizeText)
             make.leading.equalTo(25)
         }
-        textTitleLabel.snp.makeConstraints { make in
-            make.top.equalTo(subTitleLabel.snp.bottom).offset(25)
+        descriptionTextTitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(mainTextTitleLabel.snp.bottom).offset(25)
             make.size.equalTo(self.appearance.sizeText)
             make.trailing.equalTo(-25)
         }

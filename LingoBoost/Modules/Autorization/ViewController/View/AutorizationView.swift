@@ -11,7 +11,7 @@ final class AutorizationView: UIView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Авторизация"
+        label.text = Resourses.Strings.MainHeaders.autorization
         label.textAlignment = .center
         label.textColor = .systemGray
         label.font = .systemFont(ofSize: 30)
@@ -20,29 +20,29 @@ final class AutorizationView: UIView {
     
     private let emailTextField: RITextField = {
         let textField = RITextField()
-        textField.placeholder = "Email"
         textField.configurateTextField()
+        textField.placeholder = Resourses.Strings.MainHeaders.email
         return textField
     }()
     
     private let passwordTextField: RITextField = {
         let textField = RITextField()
-        textField.placeholder = "Пароль"
         textField.configurateTextField()
+        textField.placeholder = Resourses.Strings.MainHeaders.password
         return textField
     }()
     
     private lazy var autorizationButton: RIButton = {
         let button = RIButton(type: .system)
         button.configurateButton()
-        button.setTitle("Авторизация", for: .normal)
+        button.setTitle(Resourses.Strings.MainHeaders.autorization, for: .normal)
         button.addTarget(self, action: #selector(autorization), for: .touchUpInside)
         return button
     }()
     
     private lazy var forgotPassword: UIButton = {
         let button = RIButton(type: .system)
-        button.setTitle("Забыли пароль", for: .normal)
+        button.setTitle(Resourses.Strings.MainHeaders.forgotPassword, for: .normal)
         button.setTitleColor(.systemGray, for: .normal)
         return button
     }()
