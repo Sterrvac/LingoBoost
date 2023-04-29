@@ -87,6 +87,8 @@ final class StartView: UIView {
     }
 }
 
+// MARK: - Configurated
+
 extension StartView {
     func configuratedView() {
         backgroundColor = .white

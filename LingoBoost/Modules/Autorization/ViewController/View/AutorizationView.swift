@@ -18,17 +18,13 @@ final class AutorizationView: UIView {
         return label
     }()
     
-    private let emailTextField: RITextField = {
-        let textField = RITextField()
-        textField.configurateTextField()
-        textField.placeholder = Resourses.Strings.MainHeaders.email
+    private let emailTextField: RIEmailTextField = {
+        let textField = RIEmailTextField()
         return textField
     }()
     
-    private let passwordTextField: RITextField = {
-        let textField = RITextField()
-        textField.configurateTextField()
-        textField.placeholder = Resourses.Strings.MainHeaders.password
+    private let passwordTextField: RIPasswordTextField = {
+        let textField = RIPasswordTextField()
         return textField
     }()
     
@@ -58,8 +54,9 @@ final class AutorizationView: UIView {
     }
 }
 
+// MARK: - Configurated
+
 extension AutorizationView {
-    
     func configuratedView() {
         backgroundColor = .white
         addSubViews(items: [titleLabel,

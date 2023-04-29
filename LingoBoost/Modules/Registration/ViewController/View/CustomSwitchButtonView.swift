@@ -1,7 +1,9 @@
 import UIKit
 import SnapKit
 
-class CustomSwitchButton: UIButton {
+// MARK: - CustomSwitchButton
+
+final class CustomSwitchButton: UIButton {
     
     private let language: UILabel = {
         let label = UILabel()

@@ -1,9 +1,13 @@
 import UIKit
+import SnapKit
+
+// MARK: - RITextField
 
 public class RITextField: UITextField {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        configurateTextField()
     }
     
     required init?(coder: NSCoder) {

@@ -1,5 +1,7 @@
 import UIKit
 
+// MARK: - Resourses
+
 enum Resourses {
     enum Strings {
         enum MainHeaders {
@@ -20,6 +22,11 @@ enum Resourses {
         enum Language {
             static let english = "Английский"
             static let russia = "Русский"
+        }
+        enum Icons {
+            static let person = UIImage(systemName: "person")
+            static let envelope = UIImage(systemName: "envelope")
+            static let lock = UIImage(systemName: "lock")
         }
     }
 }

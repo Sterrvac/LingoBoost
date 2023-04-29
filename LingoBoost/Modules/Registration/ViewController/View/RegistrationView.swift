@@ -20,24 +20,22 @@ final class RegistrationView: UIView {
         return label
     }()
     
-    private let nameTextField: RITextField = {
-        let textField = RITextField()
-        textField.configurateTextField()
-        textField.placeholder = Resourses.Strings.MainHeaders.name
+    private let nameTextField: RINameTextField = {
+        let textField = RINameTextField()
+//        textField.textAlignment = .left
+//        textField.addConstraint(NSLayoutConstraint.activate([
+//            textField.leadingAnchor.constraint(equalTo: 15)
+//        ]))
         return textField
     }()
     
-    private let emailTextField: RITextField = {
-        let textField = RITextField()
-        textField.configurateTextField()
-        textField.placeholder = Resourses.Strings.MainHeaders.email
+    private let emailTextField: RIEmailTextField = {
+        let textField = RIEmailTextField()
         return textField
     }()
     
-    private let passwordTextField: RITextField = {
-        let textField = RITextField()
-        textField.configurateTextField()
-        textField.placeholder = Resourses.Strings.MainHeaders.password
+    private let passwordTextField: RIPasswordTextField = {
+        let textField = RIPasswordTextField()
         return textField
     }()
     
@@ -73,6 +71,8 @@ final class RegistrationView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+// MARK: - Configurated
 
 extension RegistrationView {
     func configuratedView() {
