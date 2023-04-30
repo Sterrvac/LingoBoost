@@ -1,4 +1,5 @@
 import UIKit
+import FirebaseAuth
 
 final class RegistrationViewController: UIViewController {
     
@@ -16,6 +17,13 @@ final class RegistrationViewController: UIViewController {
     
     override func loadView() {
         view = registrationView
+    }
+    
+    var handle = Auth.auth().addStateDidChangeListener { auth, user in
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        Auth.auth().removeStateDidChangeListener(handle)
     }
 }
 

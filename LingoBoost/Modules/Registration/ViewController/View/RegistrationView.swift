@@ -24,7 +24,7 @@ final class RegistrationView: UIView {
         let textField = RITextField()
         textField.configurateTextField(name: Resourses.Strings.MainHeaders.name,
                                        image: Resourses.Strings.Icons.person)
-        textField.addTarget(nil, action: #selector(textFieldDidBeginEditing), for: .editingChanged)
+        textField.addTarget(nil, action: #selector(nameTextFieldEditing), for: .editingChanged)
         return textField
     }()
     
@@ -32,6 +32,7 @@ final class RegistrationView: UIView {
         let textField = RITextField()
         textField.configurateTextField(name: Resourses.Strings.MainHeaders.email,
                                        image: Resourses.Strings.Icons.envelope)
+        textField.addTarget(nil, action: #selector(emailTextFieldEditing), for: .editingChanged)
         return textField
     }()
     
@@ -39,6 +40,7 @@ final class RegistrationView: UIView {
         let textField = RITextField()
         textField.configurateTextField(name: Resourses.Strings.MainHeaders.password,
                                        image: Resourses.Strings.Icons.lock)
+        textField.addTarget(nil, action: #selector(passwordTextFieldEditing), for: .editingChanged)
         return textField
     }()
     
@@ -74,12 +76,28 @@ final class RegistrationView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func textFieldDidBeginEditing() {
+    @objc func nameTextFieldEditing() {
         guard let text = nameTextField.text?.isEmpty else { return }
         if text {
             nameTextField.stateRITextField(state: .placeholderShow)
         } else {
             nameTextField.stateRITextField(state: .placeholderHeaden)
+        }
+    }
+    @objc func emailTextFieldEditing() {
+        guard let text = emailTextField.text?.isEmpty else { return }
+        if text {
+            emailTextField.stateRITextField(state: .placeholderShow)
+        } else {
+            emailTextField.stateRITextField(state: .placeholderHeaden)
+        }
+    }
+    @objc func passwordTextFieldEditing() {
+        guard let text = passwordTextField.text?.isEmpty else { return }
+        if text {
+            passwordTextField.stateRITextField(state: .placeholderShow)
+        } else {
+            passwordTextField.stateRITextField(state: .placeholderHeaden)
         }
     }
 }
@@ -137,16 +155,6 @@ extension RegistrationView {
             make.size.equalTo(appearance.sizeButton)
         }
     }
-    
-//    var bool: Bool? {
-//        get {
-//            return false
-//        }
-//        set {
-////            textFieldDidBeginEditing(isHeaden: textField?.isHidden)
-//        }
-//    }
-    
     
     @objc func registration() {
         delegate?.registration()

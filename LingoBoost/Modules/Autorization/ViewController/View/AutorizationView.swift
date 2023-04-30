@@ -22,6 +22,7 @@ final class AutorizationView: UIView {
         let textField = RITextField()
         textField.configurateTextField(name: Resourses.Strings.MainHeaders.email,
                                        image: Resourses.Strings.Icons.envelope)
+        textField.addTarget(nil, action: #selector(emailTextFieldEditing), for: .editingChanged)
         return textField
     }()
     
@@ -29,6 +30,7 @@ final class AutorizationView: UIView {
         let textField = RITextField()
         textField.configurateTextField(name: Resourses.Strings.MainHeaders.password,
                                        image: Resourses.Strings.Icons.lock)
+        textField.addTarget(nil, action: #selector(passwordTextFieldEditing), for: .editingChanged)
         return textField
     }()
     
@@ -55,6 +57,23 @@ final class AutorizationView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func emailTextFieldEditing() {
+        guard let text = emailTextField.text?.isEmpty else { return }
+        if text {
+            emailTextField.stateRITextField(state: .placeholderShow)
+        } else {
+            emailTextField.stateRITextField(state: .placeholderHeaden)
+        }
+    }
+    @objc func passwordTextFieldEditing() {
+        guard let text = passwordTextField.text?.isEmpty else { return }
+        if text {
+            passwordTextField.stateRITextField(state: .placeholderShow)
+        } else {
+            passwordTextField.stateRITextField(state: .placeholderHeaden)
+        }
     }
 }
 
