@@ -18,13 +18,17 @@ final class AutorizationView: UIView {
         return label
     }()
     
-    private let emailTextField: RIEmailTextField = {
-        let textField = RIEmailTextField()
+    private let emailTextField: RITextField = {
+        let textField = RITextField()
+        textField.configurateTextField(name: Resourses.Strings.MainHeaders.email,
+                                       image: Resourses.Strings.Icons.envelope)
         return textField
     }()
     
-    private let passwordTextField: RIPasswordTextField = {
-        let textField = RIPasswordTextField()
+    private let passwordTextField: RITextField = {
+        let textField = RITextField()
+        textField.configurateTextField(name: Resourses.Strings.MainHeaders.password,
+                                       image: Resourses.Strings.Icons.lock)
         return textField
     }()
     

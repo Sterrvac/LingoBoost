@@ -8,7 +8,7 @@ protocol RegistrationViewDelegate {
 final class RegistrationView: UIView {
     
     var delegate: RegistrationViewDelegate?
-    
+        
     var appearance = Appearance()
     
     private let titleLabel: UILabel = {
@@ -20,18 +20,25 @@ final class RegistrationView: UIView {
         return label
     }()
     
-    private let nameTextField: RINameTextField = {
-        let textField = RINameTextField()
+    private let nameTextField: RITextField = {
+        let textField = RITextField()
+        textField.configurateTextField(name: Resourses.Strings.MainHeaders.name,
+                                       image: Resourses.Strings.Icons.person)
+        textField.addTarget(nil, action: #selector(textFieldDidBeginEditing), for: .editingChanged)
         return textField
     }()
     
-    private let emailTextField: RIEmailTextField = {
-        let textField = RIEmailTextField()
+    private let emailTextField: RITextField = {
+        let textField = RITextField()
+        textField.configurateTextField(name: Resourses.Strings.MainHeaders.email,
+                                       image: Resourses.Strings.Icons.envelope)
         return textField
     }()
     
-    private let passwordTextField: RIPasswordTextField = {
-        let textField = RIPasswordTextField()
+    private let passwordTextField: RITextField = {
+        let textField = RITextField()
+        textField.configurateTextField(name: Resourses.Strings.MainHeaders.password,
+                                       image: Resourses.Strings.Icons.lock)
         return textField
     }()
     
@@ -66,11 +73,21 @@ final class RegistrationView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    @objc func textFieldDidBeginEditing() {
+        guard let text = nameTextField.text?.isEmpty else { return }
+        if text {
+            nameTextField.stateRITextField(state: .placeholderShow)
+        } else {
+            nameTextField.stateRITextField(state: .placeholderHeaden)
+        }
+    }
 }
 
 // MARK: - Configurated
 
 extension RegistrationView {
+
     func configuratedView() {
         backgroundColor = .white
         addSubViews(items: [titleLabel,
@@ -120,6 +137,16 @@ extension RegistrationView {
             make.size.equalTo(appearance.sizeButton)
         }
     }
+    
+//    var bool: Bool? {
+//        get {
+//            return false
+//        }
+//        set {
+////            textFieldDidBeginEditing(isHeaden: textField?.isHidden)
+//        }
+//    }
+    
     
     @objc func registration() {
         delegate?.registration()

@@ -13,6 +13,8 @@ extension RegistrationPresenter: RegistrationViewControllerOutput {
 }
 
 extension RegistrationPresenter: RegistrationViewDelegate {
+    func textFieldDidBeginEditing() {}
+    
     func registration() {}
 }
 
