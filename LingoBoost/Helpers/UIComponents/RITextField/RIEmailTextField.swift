@@ -39,7 +39,7 @@ extension RIEmailTextField {
     func configurationConstrantion() {
         emailIconView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.leading.equalTo(15)
+            make.leading.equalTo(20)
         }
         userEmail.snp.makeConstraints { make in
             make.centerY.equalTo(emailIconView)

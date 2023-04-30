@@ -22,10 +22,6 @@ final class RegistrationView: UIView {
     
     private let nameTextField: RINameTextField = {
         let textField = RINameTextField()
-//        textField.textAlignment = .left
-//        textField.addConstraint(NSLayoutConstraint.activate([
-//            textField.leadingAnchor.constraint(equalTo: 15)
-//        ]))
         return textField
     }()
     

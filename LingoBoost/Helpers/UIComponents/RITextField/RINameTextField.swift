@@ -39,7 +39,7 @@ extension RINameTextField {
     func configurationConstrantion() {
         personIconView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.leading.equalTo(15)
+            make.leading.equalTo(20)
         }
         userName.snp.makeConstraints { make in
             make.centerY.equalTo(personIconView)

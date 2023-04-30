@@ -16,10 +16,12 @@ public class RITextField: UITextField {
     
     public func configurateTextField() {
         textColor = .gray
-        textAlignment = .center
         backgroundColor = .white
         layer.borderWidth = 2
         layer.borderColor = CGColor(gray: 0.5, alpha: 0.5)
-        layer.cornerRadius = 15
+        layer.cornerRadius = 25
+        textAlignment = .natural
+        leftView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: frame.height))
+        leftViewMode = .always
     }
 }
