@@ -1,5 +1,6 @@
 import UIKit
 import SnapKit
+import Firebase
 
 protocol RegistrationViewDelegate {
     func registration()
@@ -11,7 +12,7 @@ final class RegistrationView: UIView {
         
     var appearance = Appearance()
     
-    private let titleLabel: UILabel = {
+    let titleLabel: UILabel = {
         let label = UILabel()
         label.text = Resourses.Strings.MainHeaders.registration
         label.textAlignment = .center
@@ -20,7 +21,7 @@ final class RegistrationView: UIView {
         return label
     }()
     
-    private let nameTextField: RITextField = {
+    let nameTextField: RITextField = {
         let textField = RITextField()
         textField.configurateTextField(name: Resourses.Strings.MainHeaders.name,
                                        image: Resourses.Strings.Icons.person)
@@ -28,7 +29,7 @@ final class RegistrationView: UIView {
         return textField
     }()
     
-    private let emailTextField: RITextField = {
+    let emailTextField: RITextField = {
         let textField = RITextField()
         textField.configurateTextField(name: Resourses.Strings.MainHeaders.email,
                                        image: Resourses.Strings.Icons.envelope)
@@ -36,7 +37,7 @@ final class RegistrationView: UIView {
         return textField
     }()
     
-    private let passwordTextField: RITextField = {
+    let passwordTextField: RITextField = {
         let textField = RITextField()
         textField.configurateTextField(name: Resourses.Strings.MainHeaders.password,
                                        image: Resourses.Strings.Icons.lock)
@@ -57,7 +58,7 @@ final class RegistrationView: UIView {
         return customSwitchButton
     }()
     
-    private lazy var registrationButton: RIButton = {
+    lazy var registrationButton: RIButton = {
         let button = RIButton(type: .system)
         button.configurateButton()
         button.setTitle(Resourses.Strings.MainHeaders.registration, for: .normal)
@@ -160,4 +161,3 @@ extension RegistrationView {
         delegate?.registration()
     }
 }
-        

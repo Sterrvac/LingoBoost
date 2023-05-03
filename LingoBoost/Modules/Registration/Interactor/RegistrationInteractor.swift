@@ -7,4 +7,8 @@ final class RegistrationInteractor{
     }
 }
 
-extension RegistrationInteractor: RegistrationInteractorInput {}
+extension RegistrationInteractor: RegistrationInteractorInput {
+    func getRegistrationData() {
+//        guard let stringURL = "https://\(authorizedDomain).firebaseapp.com/login?email=\(email)"
+    }
+}
