@@ -1,24 +1,10 @@
 import UIKit
-import FirebaseAuth
+import Firebase
 
 final class RegistrationViewController: UIViewController {
     
     private let presenterDelegate: RegistrationViewControllerOutput
-    var registrationView = RegistrationView()
-    
-    var signup :Bool = true{
-        willSet{
-            if newValue{
-                registrationView.titleLabel.text = "Регистрация"
-                registrationView.nameTextField.isHidden = false
-                registrationView.registrationButton.setTitle("Войти", for: .normal)
-            } else{
-                registrationView.titleLabel.text = "Вход"
-                registrationView.nameTextField.isHidden = true
-                registrationView.registrationButton.setTitle("Регистрация", for: .normal)
-            }
-        }
-    }
+    private var registrationView = RegistrationView()
     
     init(presenterDelegate: RegistrationViewControllerOutput){
         self.presenterDelegate = presenterDelegate
@@ -33,12 +19,6 @@ final class RegistrationViewController: UIViewController {
         view = registrationView
     }
     
-    var handle = Auth.auth().addStateDidChangeListener { auth, user in
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        Auth.auth().removeStateDidChangeListener(handle)
-    }
     func showAlert() {
         let alert = UIAlertController(title: "Ошибка", message: "Заполните все поля", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "ОК", style: .default, handler: nil))
@@ -57,6 +37,8 @@ extension RegistrationViewController: RegistrationViewControllerInput {
                 if error == nil{
                     if let result = result{
                         print(result.user.uid)
+                        let ref = Database.database().reference().child("users")
+                        ref.child(result.user.uid).updateChildValues(["name" : name,"email" : email])
                     }
                 }
             }
@@ -64,5 +46,14 @@ extension RegistrationViewController: RegistrationViewControllerInput {
             showAlert()
         }
         return true
+    }
+}
+
+extension RegistrationViewController: UITextFieldDelegate {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        registrationView.nameTextField.delegate = self
+        registrationView.emailTextField.delegate = self
+        registrationView.passwordTextField.delegate = self
     }
 }

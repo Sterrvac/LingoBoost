@@ -12,7 +12,7 @@ final class RegistrationView: UIView {
         
     var appearance = Appearance()
     
-    let titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = Resourses.Strings.MainHeaders.registration
         label.textAlignment = .center
@@ -25,7 +25,7 @@ final class RegistrationView: UIView {
         let textField = RITextField()
         textField.configurateTextField(name: Resourses.Strings.MainHeaders.name,
                                        image: Resourses.Strings.Icons.person)
-        textField.addTarget(nil, action: #selector(nameTextFieldEditing), for: .editingChanged)
+        textField.addTarget(nil, action: #selector(textFieldEditing), for: .editingChanged)
         return textField
     }()
     
@@ -33,7 +33,7 @@ final class RegistrationView: UIView {
         let textField = RITextField()
         textField.configurateTextField(name: Resourses.Strings.MainHeaders.email,
                                        image: Resourses.Strings.Icons.envelope)
-        textField.addTarget(nil, action: #selector(emailTextFieldEditing), for: .editingChanged)
+        textField.addTarget(nil, action: #selector(textFieldEditing), for: .editingChanged)
         return textField
     }()
     
@@ -41,7 +41,7 @@ final class RegistrationView: UIView {
         let textField = RITextField()
         textField.configurateTextField(name: Resourses.Strings.MainHeaders.password,
                                        image: Resourses.Strings.Icons.lock)
-        textField.addTarget(nil, action: #selector(passwordTextFieldEditing), for: .editingChanged)
+        textField.addTarget(nil, action: #selector(textFieldEditing), for: .editingChanged)
         return textField
     }()
     
@@ -77,28 +77,12 @@ final class RegistrationView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func nameTextFieldEditing() {
-        guard let text = nameTextField.text?.isEmpty else { return }
+    @objc func textFieldEditing(textField: RITextField) {
+        guard let text = textField.text?.isEmpty else { return }
         if text {
-            nameTextField.stateRITextField(state: .placeholderShow)
+            textField.stateRITextField(state: .placeholderShow)
         } else {
-            nameTextField.stateRITextField(state: .placeholderHeaden)
-        }
-    }
-    @objc func emailTextFieldEditing() {
-        guard let text = emailTextField.text?.isEmpty else { return }
-        if text {
-            emailTextField.stateRITextField(state: .placeholderShow)
-        } else {
-            emailTextField.stateRITextField(state: .placeholderHeaden)
-        }
-    }
-    @objc func passwordTextFieldEditing() {
-        guard let text = passwordTextField.text?.isEmpty else { return }
-        if text {
-            passwordTextField.stateRITextField(state: .placeholderShow)
-        } else {
-            passwordTextField.stateRITextField(state: .placeholderHeaden)
+            textField.stateRITextField(state: .placeholderHeaden)
         }
     }
 }

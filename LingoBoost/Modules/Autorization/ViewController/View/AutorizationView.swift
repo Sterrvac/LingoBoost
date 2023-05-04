@@ -22,7 +22,7 @@ final class AutorizationView: UIView {
         let textField = RITextField()
         textField.configurateTextField(name: Resourses.Strings.MainHeaders.email,
                                        image: Resourses.Strings.Icons.envelope)
-        textField.addTarget(nil, action: #selector(emailTextFieldEditing), for: .editingChanged)
+        textField.addTarget(nil, action: #selector(textFieldEditing), for: .editingChanged)
         return textField
     }()
     
@@ -30,7 +30,7 @@ final class AutorizationView: UIView {
         let textField = RITextField()
         textField.configurateTextField(name: Resourses.Strings.MainHeaders.password,
                                        image: Resourses.Strings.Icons.lock)
-        textField.addTarget(nil, action: #selector(passwordTextFieldEditing), for: .editingChanged)
+        textField.addTarget(nil, action: #selector(textFieldEditing), for: .editingChanged)
         return textField
     }()
     
@@ -59,20 +59,12 @@ final class AutorizationView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func emailTextFieldEditing() {
-        guard let text = emailTextField.text?.isEmpty else { return }
+    @objc func textFieldEditing(textField: RITextField) {
+        guard let text = textField.text?.isEmpty else { return }
         if text {
-            emailTextField.stateRITextField(state: .placeholderShow)
+            textField.stateRITextField(state: .placeholderShow)
         } else {
-            emailTextField.stateRITextField(state: .placeholderHeaden)
-        }
-    }
-    @objc func passwordTextFieldEditing() {
-        guard let text = passwordTextField.text?.isEmpty else { return }
-        if text {
-            passwordTextField.stateRITextField(state: .placeholderShow)
-        } else {
-            passwordTextField.stateRITextField(state: .placeholderHeaden)
+            textField.stateRITextField(state: .placeholderHeaden)
         }
     }
 }
