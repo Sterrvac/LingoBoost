@@ -1,1 +1,3 @@
-protocol TrialModeInteractorOutput: AnyObject {}
+protocol TrialModeInteractorOutput: AnyObject {
+    func getFirebaseString()
+}

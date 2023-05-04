@@ -4,7 +4,7 @@ import SnapKit
 final class TrialModeViewController: UIViewController {
     
     private let presenterDelegate: TrialModeViewControllerOutput
-    lazy var trialModeView = TrialModeView()
+    lazy var trialModeView = TrialModeView(delegate: presenterDelegate as! TrialModeViewDelegate)
     
     init(presenterDelegate: TrialModeViewControllerOutput) {
         self.presenterDelegate = presenterDelegate
@@ -25,6 +25,5 @@ final class TrialModeViewController: UIViewController {
 }
 
 // MARK: - StartViewControllerInput
+extension TrialModeViewController: TrialModeViewControllerInput {}
 
-extension TrialModeViewController: TrialModeViewControllerInput {
-}

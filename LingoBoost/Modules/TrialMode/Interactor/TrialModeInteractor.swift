@@ -1,3 +1,5 @@
+import Firebase
+
 final class TrialModeInteractor {
     
     private let presenterDelegate: TrialModeInteractorOutput
@@ -5,7 +7,10 @@ final class TrialModeInteractor {
     init(presenterDelegate: TrialModeInteractorOutput) {
         self.presenterDelegate = presenterDelegate
     }
-    
 }
 
-extension TrialModeInteractor: TrialModeInteractorInput {}
+extension TrialModeInteractor: TrialModeInteractorInput {
+    func getFirebaseString() {
+        presenterDelegate.getFirebaseString()
+    }
+}

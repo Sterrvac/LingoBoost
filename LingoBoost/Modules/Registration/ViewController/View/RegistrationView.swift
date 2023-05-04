@@ -3,7 +3,8 @@ import SnapKit
 import Firebase
 
 protocol RegistrationViewDelegate {
-    func registration()
+    func registration(name: String, email: String, password: String)
+    func showAlert()
 }
 
 final class RegistrationView: UIView {
@@ -11,6 +12,12 @@ final class RegistrationView: UIView {
     var delegate: RegistrationViewDelegate?
         
     var appearance = Appearance()
+    
+    private let keybouardButton: UIButton = {
+        let button = UIButton()
+        button.resignFirstResponder()
+        return button
+    }()
     
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -21,7 +28,7 @@ final class RegistrationView: UIView {
         return label
     }()
     
-    let nameTextField: RITextField = {
+    private let nameTextField: RITextField = {
         let textField = RITextField()
         textField.configurateTextField(name: Resourses.Strings.MainHeaders.name,
                                        image: Resourses.Strings.Icons.person)
@@ -29,7 +36,7 @@ final class RegistrationView: UIView {
         return textField
     }()
     
-    let emailTextField: RITextField = {
+    private let emailTextField: RITextField = {
         let textField = RITextField()
         textField.configurateTextField(name: Resourses.Strings.MainHeaders.email,
                                        image: Resourses.Strings.Icons.envelope)
@@ -37,7 +44,7 @@ final class RegistrationView: UIView {
         return textField
     }()
     
-    let passwordTextField: RITextField = {
+    private let passwordTextField: RITextField = {
         let textField = RITextField()
         textField.configurateTextField(name: Resourses.Strings.MainHeaders.password,
                                        image: Resourses.Strings.Icons.lock)
@@ -66,7 +73,8 @@ final class RegistrationView: UIView {
         return button
     }()
     
-    override init(frame: CGRect = UIScreen.main.bounds) {
+    init(frame: CGRect = UIScreen.main.bounds, delegate: RegistrationViewDelegate) {
+        self.delegate = delegate
         super.init(frame: frame)
         backgroundColor = .systemGray
         configuratedView()
@@ -93,7 +101,8 @@ extension RegistrationView {
 
     func configuratedView() {
         backgroundColor = .white
-        addSubViews(items: [titleLabel,
+        addSubViews(items: [keybouardButton,
+                            titleLabel,
                             nameTextField,
                             emailTextField,
                             passwordTextField,
@@ -102,6 +111,9 @@ extension RegistrationView {
                             registrationButton])
     }
     func configurationConstrantion() {
+        keybouardButton.snp.makeConstraints { make in
+            make.size.equalToSuperview()
+        }
         titleLabel.snp.makeConstraints { make in
             make.size.equalTo(appearance.sizeTitle)
             make.top.equalToSuperview().inset(150)
@@ -142,6 +154,14 @@ extension RegistrationView {
     }
     
     @objc func registration() {
-        delegate?.registration()
+        let name = nameTextField.text!
+        let email = emailTextField.text!
+        let password = passwordTextField.text!
+        
+        if !name.isEmpty && !email.isEmpty && !password.isEmpty {
+            delegate?.registration(name: name, email: email, password: password)
+        } else {
+            delegate?.showAlert()
+        }
     }
 }

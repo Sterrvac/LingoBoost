@@ -2,6 +2,7 @@ import UIKit
 
 protocol Coordinator {
     func start()
+    func startMain()
 }
 
 final class BaseCoordinator: Coordinator {
@@ -15,7 +16,11 @@ final class BaseCoordinator: Coordinator {
     func start() {
         let registrationFactory = StartFactory().build()
         
-        navigationController.pushViewController(registrationFactory, animated: true)
+        navigationController.setViewControllers([registrationFactory], animated: true)
     }
-    
+    func startMain() {
+        let trialModeFactory = TrialModeFactory().build()
+        
+        navigationController.setViewControllers([trialModeFactory], animated: true)
+    }
 }

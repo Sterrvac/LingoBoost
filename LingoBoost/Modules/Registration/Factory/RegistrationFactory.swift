@@ -7,7 +7,7 @@ struct RegistrationFactory{
         
         router.registrationViewController = viewController
         
-        presenter.viewController = viewController as? any RegistrationViewControllerInput
+        presenter.viewController = viewController
         presenter.interactor = interactor
         return viewController
     }

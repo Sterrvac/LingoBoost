@@ -1,3 +1,5 @@
+import Firebase
+
 final class TrialModePresenter{
     weak var viewController: TrialModeViewControllerInput?
     weak var interactor: TrialModeInteractorInput?
@@ -12,14 +14,17 @@ extension TrialModePresenter: TrialModeViewControllerOutput {
 }
 
 extension TrialModePresenter: TrialModeViewDelegate {
-//    func buttonTappedAutorization() {
-//        router.openAutorizationVC()
-//    }
-//
-//    func buttonTappedRegistration() {
-//        router.openRegistrationVC()
-//    }
+    func logout() {
+        do {
+            try Auth.auth().signOut()
+            self.router.openAutorizationVC()
+        } catch {
+            print(error)
+        }
+    }
 }
 
-extension TrialModePresenter: TrialModeInteractorOutput {}
+extension TrialModePresenter: TrialModeInteractorOutput {
+    func getFirebaseString() {}
+}
 

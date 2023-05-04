@@ -3,12 +3,12 @@ struct TrialModeFactory{
         let router = TrialModeRouter()
         let presenter = TrialModePresenter(router: router)
         let interactor = TrialModeInteractor(presenterDelegate: presenter)
-        let viewController = TrialModeViewController(presenterDelegate: presenter as TrialModeViewControllerOutput)
+        let viewController = TrialModeViewController(presenterDelegate: presenter)
         
         router.trialModeViewController = viewController
-        
         presenter.viewController = viewController
-        presenter.interactor = interactor as any TrialModeInteractorInput
+        presenter.interactor = interactor
+        
         return viewController
     }
 }
