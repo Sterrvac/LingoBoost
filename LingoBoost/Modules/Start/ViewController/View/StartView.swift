@@ -3,10 +3,7 @@ import SnapKit
 import AuthenticationServices
 
 protocol StartViewDelegate {
-    func buttonAutorization()
-    func buttonRegistration()
     func buttonTrialMode()
-    func buttonAppleId()
 }
 
 final class StartView: UIView {
@@ -43,35 +40,12 @@ final class StartView: UIView {
         return label
     }()
     
-    private lazy var autorizationButton: RIButton = {
-        let button = RIButton(type: .system)
-        button.configurateButton()
-        button.setTitle(Resourses.Strings.MainHeaders.autorization, for: .normal)
-        button.addTarget(self, action: #selector(buttonAutorization), for: .touchUpInside)
-        return button
-    }()
-    
-    private lazy var registrationButton: RIButton = {
-        let button = RIButton(type: .system)
-        button.configurateButton()
-        button.setTitle(Resourses.Strings.MainHeaders.registration, for: .normal)
-        button.addTarget(self, action: #selector(buttonRegistration), for: .touchUpInside)
-        return button
-    }()
-    
     private lazy var trialModeButton: RIButton = {
         let button = RIButton(type: .system)
         button.configurateButton()
-        button.setTitle(Resourses.Strings.MainHeaders.trialMode, for: .normal)
+        button.setTitle(Resourses.Strings.MainHeaders.start, for: .normal)
         button.addTarget(self, action: #selector(buttonTrialMode), for: .touchUpInside)
         button.backgroundColor = .systemGreen
-        return button
-    }()
-    
-    private lazy var appleLogInButton : ASAuthorizationAppleIDButton = {
-        let button = ASAuthorizationAppleIDButton()
-        button.addTarget(self, action: #selector(handleLogInWithAppleID), for: .touchUpInside)
-        button.cornerRadius = 15
         return button
     }()
 
@@ -95,10 +69,7 @@ extension StartView {
         addSubViews(items: [lingoBoostTitleLabel,
                             mainTextTitleLabel,
                             descriptionTextTitleLabel,
-                            registrationButton,
-                            autorizationButton,
-                            trialModeButton,
-                            appleLogInButton])
+                            trialModeButton])
     }
     func configurationConstrantion() {
         lingoBoostTitleLabel.snp.makeConstraints { make in
@@ -116,44 +87,13 @@ extension StartView {
             make.size.equalTo(self.appearance.sizeText)
             make.trailing.equalTo(-25)
         }
-        registrationButton.snp.makeConstraints { make in
+        trialModeButton.snp.makeConstraints { make in
             make.center.equalToSuperview()
             make.leading.equalTo(25)
             make.size.equalTo(self.appearance.sizeButton)
         }
-        autorizationButton.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(registrationButton.snp.bottom).offset(25)
-            make.leading.equalTo(registrationButton)
-            make.size.equalTo(self.appearance.sizeButton)
-        }
-        trialModeButton.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(autorizationButton.snp.bottom).offset(25)
-            make.leading.equalTo(autorizationButton)
-            make.size.equalTo(self.appearance.sizeButton)
-        }
-        appleLogInButton.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(trialModeButton.snp.bottom).offset(50)
-            make.size.equalTo(self.appearance.sizeButtonAuto)
-            
-        }
-    }
-    
-    @objc func buttonAutorization() {
-        delegate?.buttonAutorization()
-    }
-    @objc func buttonRegistration() {
-        delegate?.buttonRegistration()
     }
     @objc func buttonTrialMode() {
         delegate?.buttonTrialMode()
     }
-    // Должен вызываться отдельный модуль
-    @objc func handleLogInWithAppleID() {
-        delegate?.buttonAppleId()
-        let request = ASAuthorizationAppleIDProvider().createRequest()
-        request.requestedScopes = [.fullName, .email]
-     }
 }

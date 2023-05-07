@@ -14,7 +14,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         Auth.auth().addStateDidChangeListener { (auth, user) in
-            print("user - \(user)")
+            print("user - \(String(describing: user))")
             if user == nil {
                 self.showModelAuth()
             } else {

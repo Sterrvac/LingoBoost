@@ -7,7 +7,7 @@ enum Resourses {
         enum MainHeaders {
             static let registration = "Регистрация"
             static let autorization = "Авторизация"
-            static let trialMode = "Пробный период"
+            static let start = "Начать"
             static let selectionLanguage = "Выбор языка:"
             static let name = "Имя"
             static let email = "Почта"
