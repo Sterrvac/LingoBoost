@@ -40,6 +40,16 @@ final class StartView: UIView {
         return label
     }()
     
+    private let descriptionTextLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 17)
+        label.numberOfLines = 0
+        label.text = Resourses.Strings.TextHeaders.descriptionTextStartView
+        label.textAlignment = .right
+        label.textColor = .systemGray
+        return label
+    }()
+    
     private lazy var trialModeButton: RIButton = {
         let button = RIButton(type: .system)
         button.configurateButton()
@@ -69,6 +79,7 @@ extension StartView {
         addSubViews(items: [lingoBoostTitleLabel,
                             mainTextTitleLabel,
                             descriptionTextTitleLabel,
+                            descriptionTextLabel,
                             trialModeButton])
     }
     func configurationConstrantion() {
@@ -87,10 +98,16 @@ extension StartView {
             make.size.equalTo(self.appearance.sizeText)
             make.trailing.equalTo(-25)
         }
-        trialModeButton.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+        descriptionTextLabel.snp.makeConstraints { make in
+            make.top.equalTo(descriptionTextTitleLabel.snp.bottom).offset(25)
+            make.size.equalTo(self.appearance.sizeText)
             make.leading.equalTo(25)
-            make.size.equalTo(self.appearance.sizeButton)
+        }
+        trialModeButton.snp.makeConstraints { make in
+            make.top.equalTo(descriptionTextLabel.snp.bottom).offset(25)
+            make.leading.equalTo(descriptionTextLabel)
+            make.centerX.equalToSuperview()
+            make.size.equalTo(appearance.sizeButton)
         }
     }
     @objc func buttonTrialMode() {

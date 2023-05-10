@@ -18,6 +18,7 @@ enum Resourses {
             static let lingoBoost = "LingoBoost"
             static let mainTextStartView = "Увеличиваем запаc слов на иностранных языках!"
             static let descriptionStartView = "Добавляй интересующие тебя слова повторяй их в любое время!"
+            static let descriptionTextStartView = "Приглашай друзей и соревнуйся с ними"
         }
         enum Language {
             static let english = "Английский"
