@@ -20,6 +20,7 @@
 		FA6F38F02A08237100310B03 /* ActiveServicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F38EF2A08237100310B03 /* ActiveServicePresenter.swift */; };
 		FA6F38F22A08238400310B03 /* ActiveServiceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F38F12A08238400310B03 /* ActiveServiceRouter.swift */; };
 		FA6F38F42A08239E00310B03 /* ActiveServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F38F32A08239E00310B03 /* ActiveServiceFactory.swift */; };
+		FA6F38F62A121CB700310B03 /* WordInBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F38F52A121CB700310B03 /* WordInBoxView.swift */; };
 		FA97DCF629E1C6C20069DEB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97DCF529E1C6C20069DEB2 /* AppDelegate.swift */; };
 		FA97DCFF29E1C6C50069DEB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA97DCFE29E1C6C50069DEB2 /* Assets.xcassets */; };
 		FA97DD0229E1C6C50069DEB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA97DD0029E1C6C50069DEB2 /* LaunchScreen.storyboard */; };
@@ -116,6 +117,7 @@
 		FA6F38EF2A08237100310B03 /* ActiveServicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveServicePresenter.swift; sourceTree = "<group>"; };
 		FA6F38F12A08238400310B03 /* ActiveServiceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveServiceRouter.swift; sourceTree = "<group>"; };
 		FA6F38F32A08239E00310B03 /* ActiveServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveServiceFactory.swift; sourceTree = "<group>"; };
+		FA6F38F52A121CB700310B03 /* WordInBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordInBoxView.swift; sourceTree = "<group>"; };
 		FA97DCF229E1C6C20069DEB2 /* LingoBoost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LingoBoost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA97DCF529E1C6C20069DEB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA97DCFE29E1C6C50069DEB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -578,6 +580,7 @@
 			isa = PBXGroup;
 			children = (
 				FAB5C7A129F1827600C34190 /* TrialModeView.swift */,
+				FA6F38F52A121CB700310B03 /* WordInBoxView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -795,6 +798,7 @@
 				FA97DD2529E1CAE70069DEB2 /* RegistrationViewController.swift in Sources */,
 				FA97DD3329E1CDD60069DEB2 /* RegistrationViewControllerInput.swift in Sources */,
 				FAB5C78D29F167BD00C34190 /* AutorizationInteractorOutput.swift in Sources */,
+				FA6F38F62A121CB700310B03 /* WordInBoxView.swift in Sources */,
 				FAD5272F29EC7BE60047F11E /* StartInteractorOutput.swift in Sources */,
 				FA97DCF629E1C6C20069DEB2 /* AppDelegate.swift in Sources */,
 				FAB5C79129F16CFA00C34190 /* AutorizationViewContollerInput.swift in Sources */,

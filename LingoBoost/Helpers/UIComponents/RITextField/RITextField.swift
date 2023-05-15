@@ -52,7 +52,6 @@ public class RITextField: UITextField {
         layer.borderColor = CGColor(gray: 0.5, alpha: 0.5)
         layer.cornerRadius = 25
         textAlignment = .natural
-//        setLeadingPaddingPoints(width: 20)
         guard let image else { return }
         personIconView.image = image
         userName.text = name
